@@ -19,4 +19,16 @@
 
         <item name="android:windowBackground">@drawable/splash</item>
     </style>
+
+    <style name="Theme.Footballapp.Starting" parent="Theme.SplashScreen">
+        //배경
+        <item name="windowSplashScreenBackground">@color/purple_200</item>
+        //아이콘
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_screen</item>
+        //전환될 theme
+        <item name="postSplashScreenTheme">@style/Theme.Footballapp</item>
+        //표시할 시간
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+
+    </style>
 </resources>
