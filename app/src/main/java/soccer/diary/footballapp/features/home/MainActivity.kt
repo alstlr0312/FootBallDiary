@@ -1,8 +1,11 @@
 package soccer.diary.footballapp.features.home
 
+import android.annotation.SuppressLint
 import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.recyclerview.widget.RecyclerView
@@ -10,11 +13,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import soccer.diary.footballapp.R
 import soccer.diary.footballapp.databinding.ActivityMainBinding
 import soccer.diary.footballapp.model.Leagues
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: MainLeagueAdapter
+    @SuppressLint("UseCompatLoadingForDrawables")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -45,6 +50,7 @@ class MainActivity : AppCompatActivity() {
         adapter.listData = leaguesList
         recyclerView.adapter = adapter
     }
+
 
 
 }

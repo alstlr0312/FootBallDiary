@@ -34,9 +34,53 @@
         android:id="@+id/league_rv"
         android:layout_width="0dp"
         android:layout_height="160dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seach_bar" />
+
+    <EditText
+        android:id="@+id/seach_bar"
+        android:layout_width="241dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shape_round"
+        android:ems="10"
+        android:hint="  search for Leagues.."
+        android:inputType="textPersonName"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="National Competition"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/league_rv" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="396dp" />
+    </ScrollView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
