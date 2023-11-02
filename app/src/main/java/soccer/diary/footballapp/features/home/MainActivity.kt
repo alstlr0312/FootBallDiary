@@ -17,8 +17,8 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: MainLeagueAdapter
+    private lateinit var LrecyclerView: RecyclerView
+    private lateinit var Ladapter: MainLeagueAdapter
     @SuppressLint("UseCompatLoadingForDrawables")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,12 +27,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        recyclerView = binding.leagueRv
-        adapter = MainLeagueAdapter()
+        LrecyclerView = binding.leagueRv
+        Ladapter = MainLeagueAdapter()
 
-        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        recyclerView.setHasFixedSize(true)
-        recyclerView.addItemDecoration(HorizontalItemDecorator(20))
+        LrecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        LrecyclerView.setHasFixedSize(true)
+        LrecyclerView.addItemDecoration(HorizontalItemDecorator(20))
         val cl = resources.getDrawable(R.drawable.cl_logo, null)
         val bun = resources.getDrawable(R.drawable.bun_logo, null)
         val pl = resources.getDrawable(R.drawable.pl_logo, null)
@@ -45,10 +45,8 @@ class MainActivity : AppCompatActivity() {
         leaguesList.add(Leagues("리그 1", ligue1))
         leaguesList.add(Leagues("k리그", kligue))
 
-
-
-        adapter.listData = leaguesList
-        recyclerView.adapter = adapter
+        Ladapter.listData = leaguesList
+        LrecyclerView.adapter = Ladapter
     }
 
 
