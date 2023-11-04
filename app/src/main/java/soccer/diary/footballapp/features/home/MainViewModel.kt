@@ -1,53 +1,57 @@
 package soccer.diary.footballapp.features.home
 
+import android.content.ContentValues
 import android.util.Log
+import androidx.constraintlayout.widget.StateSet
 import androidx.constraintlayout.widget.StateSet.TAG
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.unity.mynativeapp.network.RetrofitClient
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import org.json.JSONException
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import soccer.diary.footballapp.model.FixturesResponse
+import java.io.IOException
+import java.util.*
 
 class MainViewModel : ViewModel() {
     private val _toastMessage = MutableLiveData<String>()
     val toastMessage: LiveData<String> = _toastMessage
 
-    private val _loading = MutableLiveData<Int>()
-    val loading: LiveData<Int> = _loading
+    private val _fixtureData = MutableLiveData<FixturesResponse?>()
+    val fixtureData: LiveData<FixturesResponse?> = _fixtureData
+    fun fixtures(h2h: String, league:Int, season:Int, observer: ResponseObserver){
+        RetrofitClient.getfixtures("33-34",39,2023,object : okhttp3.Callback {
+            override fun onFailure(call: okhttp3.Call, e: IOException) {
+                Log.d("error","error")
+            }
 
-    private val _checkSuccess = MutableLiveData<Boolean>(false)
-    val checkSuccess: LiveData<Boolean> = _checkSuccess
-
-    fun fixtures(h2h: String, league:Int, season:Int) {
-
-        //postCheckAPI(h2h,league,season)
-    }
-
-   /* private fun postCheckAPI(h2h: String, league:Int, season:Int) {
-        RetrofitClient.getApiService().getFixtures(h2h,league,season).enqueue(object :
-            Callback<FixturesResponse> {
-            override fun onResponse(call: Call<FixturesResponse>, response: Response<FixturesResponse>) {
-                val code = response.code()
-                if (code == 200) {
-                    val data = response.body()?.response ?: return
-                    Log.d("check", "data: ${data}")
-                    Log.d("check", "data: ${code}")
-                }else{
-                    val body = response.errorBody()?.string()
+            @Throws(IOException::class)
+            override fun onResponse(call: okhttp3.Call, response: okhttp3.Response) {
+                if (response.isSuccessful) {
+                    val responseStr = response.body?.string()
+                    val data = Gson().fromJson(responseStr, FixturesResponse::class.java)
+                    observer.onFixturesResponseReceived(data)
+                } else {
+                    observer.onFixturesResponseError()
                 }
             }
-
-
-            override fun onFailure(call: Call<FixturesResponse>, t: Throwable) {
-                Log.e(TAG, "Error: ${t.message}")
-
-            }
         })
-    }*/
+
+        try {
+            Thread.sleep(2000)
+        } catch (e: InterruptedException) {
+            e.printStackTrace()
+        }
+    }
+
+
+
 }

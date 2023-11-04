@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.constraintlayout.widget.StateSet
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.ViewModelProvider
@@ -20,7 +21,7 @@ import soccer.diary.footballapp.model.Leagues
 import java.io.IOException
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), ResponseObserver {
     private lateinit var viewModel: MainViewModel
     private lateinit var binding: ActivityMainBinding
     private lateinit var LrecyclerView: RecyclerView
@@ -56,30 +57,13 @@ class MainActivity : AppCompatActivity() {
         Ladapter.listData = leaguesList
         LrecyclerView.adapter = Ladapter
 
-        RetrofitClient.getfixtures("33-34",39,2023,object : okhttp3.Callback {
-            override fun onFailure(call: Call, e: IOException) {
-                Log.d("error","error")
-            }
 
-            @Throws(IOException::class)
-            override fun onResponse(call: Call, response: Response) {
-                if (response.isSuccessful) {
-                    val responseStr = response.body?.string()
-                    Log.d(StateSet.TAG, "findPlacesByText response: $responseStr")
-                    RetrofitClient.showResults(responseStr!!)
-                } else {
-                    // Request not successful
-                }
-            }
-        })
+    }
+    override fun onFixturesResponseReceived(fixturesResponse: FixturesResponse) {
 
-        try {
-            Thread.sleep(2000)
-        } catch (e: InterruptedException) {
-            e.printStackTrace()
-        }
+    }
 
-
+    override fun onFixturesResponseError() {
 
     }
 }
