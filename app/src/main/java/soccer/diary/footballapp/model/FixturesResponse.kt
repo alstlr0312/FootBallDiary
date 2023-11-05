@@ -2,12 +2,29 @@ package soccer.diary.footballapp.model
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
+data class gameItem(
+    @SerializedName("homeimg")
+    val homeimg: String,
+    @SerializedName("homescore")
+    val homescore: Int,
+    @SerializedName("hometeam")
+    val hometeam: String,
+    @SerializedName("awayimg")
+    val awayimg: String,
+    @SerializedName("awayscore")
+    val awayscore: Int,
+    @SerializedName("awayteam")
+    val awayteam: String,
+    @SerializedName("startime")
+    val startime: String,
+)
 data class FixturesResponse(
     @SerializedName("errors")
     val errors: List<Any>,
     @SerializedName("get")
-    val `get`: String,
+    val get: String,
     @SerializedName("paging")
     val paging: Paging,
     @SerializedName("parameters")
@@ -17,6 +34,7 @@ data class FixturesResponse(
     @SerializedName("results")
     val results: Int
 )
+
 data class Away(
     @SerializedName("id")
     val id: Int,

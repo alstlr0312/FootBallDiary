@@ -4,21 +4,16 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
-import androidx.constraintlayout.widget.StateSet
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.LinearLayoutManager
-
-import com.unity.mynativeapp.network.RetrofitClient
-import okhttp3.Call
-import okhttp3.Response
 import soccer.diary.footballapp.R
 import soccer.diary.footballapp.databinding.ActivityMainBinding
 import soccer.diary.footballapp.model.FixturesResponse
 import soccer.diary.footballapp.model.Leagues
-import java.io.IOException
+import soccer.diary.footballapp.model.gameItem
+import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity(), ResponseObserver {
@@ -26,6 +21,8 @@ class MainActivity : AppCompatActivity(), ResponseObserver {
     private lateinit var binding: ActivityMainBinding
     private lateinit var LrecyclerView: RecyclerView
     private lateinit var Ladapter: MainLeagueAdapter
+    private lateinit var Nadapter: NationalAdapter
+    private lateinit var NrecyclerView: RecyclerView
 
     @SuppressLint("UseCompatLoadingForDrawables")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,10 +35,10 @@ class MainActivity : AppCompatActivity(), ResponseObserver {
         LrecyclerView = binding.leagueRv
         Ladapter = MainLeagueAdapter()
 
-        LrecyclerView.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        LrecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         LrecyclerView.setHasFixedSize(true)
         LrecyclerView.addItemDecoration(HorizontalItemDecorator(20))
+
         val cl = resources.getDrawable(R.drawable.cl_logo, null)
         val bun = resources.getDrawable(R.drawable.bun_logo, null)
         val pl = resources.getDrawable(R.drawable.pl_logo, null)
@@ -54,12 +51,34 @@ class MainActivity : AppCompatActivity(), ResponseObserver {
         leaguesList.add(Leagues("리그 1", ligue1))
         leaguesList.add(Leagues("k리그", kligue))
 
-        Ladapter.listData = leaguesList
-        LrecyclerView.adapter = Ladapter
-
-
+        val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        val currentDate = Calendar.getInstance().time
+        val calendar = Calendar.getInstance()
+        calendar.time = currentDate
+        calendar.add(Calendar.DAY_OF_MONTH, -1)
+        val previousDate = calendar.time
+        val previousDateString = dateFormat.format(previousDate)
+        val dateString = dateFormat.format(currentDate)
+        NrecyclerView = binding.nationalRv
+        Nadapter = NationalAdapter(this)
+        NrecyclerView.layoutManager = LinearLayoutManager(this)
+        NrecyclerView.adapter = Nadapter
+        Log.d("date","33-34")
+        viewModel.fixtures(39,2023,"2023-11-04","2023-11-06",this)
     }
-    override fun onFixturesResponseReceived(fixturesResponse: FixturesResponse) {
+    override fun onFixturesResponseReceived(data: FixturesResponse) {
+        for (i in data.response) {
+            val homeimg = i.teams.home.logo
+            val homescore = i.goals.home
+            val hometeam = i.teams.home.name
+            val awayimg = i.teams.away.logo
+            val awayscore = i.goals.away
+            val awayteam = i.teams.away.name
+            val startime = i.fixture.date
+            Nadapter.addItem(
+                gameItem(homeimg,homescore,hometeam,awayimg,awayscore,awayteam,startime)
+            )
+        }
 
     }
 

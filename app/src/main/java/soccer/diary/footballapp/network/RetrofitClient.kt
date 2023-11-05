@@ -30,11 +30,11 @@ object RetrofitClient{
         call.enqueue(callback)
     }
 
-    fun getfixtures(h2h: String, league:Int, season:Int, callback: okhttp3.Callback) {
-        RetrofitClient.getRapidApiAsync(
-            String.format(Locale.US, "https://%s/v3/fixtures/headtohead?h2h=%s&league=%d&season=%d", RAPIDAPI_TRUEWAY_PLACES_HOST, h2h, league, season),
-            RetrofitClient.RAPIDAPI_KEY,
-            RetrofitClient.RAPIDAPI_TRUEWAY_PLACES_HOST,
+    fun getfixtures(league:Int, season:Int, fromDate: String, toDate: String, callback: okhttp3.Callback) {
+        getRapidApiAsync(
+            String.format(Locale.US, "https://%s/v3/fixtures?league=%d&season=%d&from=%s&to=%s", RAPIDAPI_TRUEWAY_PLACES_HOST, league, season, fromDate, toDate),
+            RAPIDAPI_KEY,
+            RAPIDAPI_TRUEWAY_PLACES_HOST,
             callback
         )
 

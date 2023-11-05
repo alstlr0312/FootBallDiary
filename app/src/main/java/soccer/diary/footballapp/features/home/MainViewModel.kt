@@ -27,15 +27,15 @@ class MainViewModel : ViewModel() {
 
     private val _fixtureData = MutableLiveData<FixturesResponse?>()
     val fixtureData: LiveData<FixturesResponse?> = _fixtureData
-    fun fixtures(h2h: String, league:Int, season:Int, observer: ResponseObserver){
-        RetrofitClient.getfixtures("33-34",39,2023,object : okhttp3.Callback {
+    fun fixtures(league:Int, season:Int, fromDate: String, toDate: String, observer: ResponseObserver){
+        RetrofitClient.getfixtures(league,season,fromDate,toDate, object : okhttp3.Callback {
             override fun onFailure(call: okhttp3.Call, e: IOException) {
                 Log.d("error","error")
             }
-
             @Throws(IOException::class)
             override fun onResponse(call: okhttp3.Call, response: okhttp3.Response) {
                 if (response.isSuccessful) {
+                    Log.d("responseStr","responseStr")
                     val responseStr = response.body?.string()
                     val data = Gson().fromJson(responseStr, FixturesResponse::class.java)
                     observer.onFixturesResponseReceived(data)

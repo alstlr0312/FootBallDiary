@@ -66,7 +66,7 @@
         app:layout_constraintTop_toBottomOf="@+id/league_rv" />
 
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="260dp"
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -75,6 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/national_rv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout_editor_absoluteX="1dp"
