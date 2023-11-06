@@ -1,13 +1,16 @@
 package soccer.diary.footballapp.features.home
 
 import android.content.Context
+import android.graphics.Color
 import android.net.Uri
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import androidx.recyclerview.widget.RecyclerView
+import soccer.diary.footballapp.R
 import soccer.diary.footballapp.databinding.NationalItemBinding
 import soccer.diary.footballapp.model.gameItem
 
@@ -47,7 +50,18 @@ class NationalAdapter(private val context: Context) : RecyclerView.Adapter<Natio
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(itemList[position])
+        val item = itemList[position]
+        //배경 변경
+
+        val itemBackground = ContextCompat.getDrawable(holder.itemView.context, R.drawable.national_shadow_view)
+        val itemBackground2 = ContextCompat.getDrawable(holder.itemView.context, R.drawable.national_shadow_view2)
+        if (position % 2 == 0) {
+            holder.itemView.background = itemBackground
+        } else {
+            holder.itemView.background = itemBackground2
+        }
+
+        holder.bind(item)
     }
 
     override fun getItemCount(): Int {

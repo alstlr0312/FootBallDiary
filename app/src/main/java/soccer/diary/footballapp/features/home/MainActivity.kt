@@ -50,6 +50,8 @@ class MainActivity : AppCompatActivity(), ResponseObserver {
         leaguesList.add(Leagues("분데리스가", bun))
         leaguesList.add(Leagues("리그 1", ligue1))
         leaguesList.add(Leagues("k리그", kligue))
+        Ladapter.listData = leaguesList
+        LrecyclerView.adapter = Ladapter
 
         val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
         val currentDate = Calendar.getInstance().time
@@ -63,8 +65,9 @@ class MainActivity : AppCompatActivity(), ResponseObserver {
         Nadapter = NationalAdapter(this)
         NrecyclerView.layoutManager = LinearLayoutManager(this)
         NrecyclerView.adapter = Nadapter
-        Log.d("date","33-34")
-        viewModel.fixtures(39,2023,"2023-11-04","2023-11-06",this)
+        Log.d("date","${previousDateString}")
+        Log.d("date","${dateString}")
+        viewModel.fixtures(39,2023,previousDateString,dateString,this)
     }
     override fun onFixturesResponseReceived(data: FixturesResponse) {
         for (i in data.response) {
@@ -75,8 +78,25 @@ class MainActivity : AppCompatActivity(), ResponseObserver {
             val awayscore = i.goals.away
             val awayteam = i.teams.away.name
             val startime = i.fixture.date
+            val status = i.fixture.status.short
+            var check: String
+            val regex = Regex("""(\d{2}-\d{2})T(\d{2}:\d{2})""")
+            val matchResult = regex.find(startime)
+            val monthDay = matchResult?.groupValues!![1]
+            val time = matchResult.groupValues[2]
+
+            if(status == "TBD" || status == "NS")  check="$monthDay($time)"
+            else if(status == "1H") check="전반"
+            else if(status == "HT") check="전반 종료"
+            else if(status == "2H") check="후반"
+            else if(status == "ET") check="추가시간"
+            else if(status =="BT") check="연장"
+            else if(status=="P") check ="승부차기"
+            else if(status == "SUSP" || status == "INT") check="경기 중단"
+            else if(status == "FT" || status == "AET" || status=="PEN") check="경기 종료"
+            else check="취소"
             Nadapter.addItem(
-                gameItem(homeimg,homescore,hometeam,awayimg,awayscore,awayteam,startime)
+                gameItem(homeimg,homescore,hometeam,awayimg,awayscore,awayteam,check)
             )
         }
 
