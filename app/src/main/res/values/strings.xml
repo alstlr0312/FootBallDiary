@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">footballapp</string>
+    <string name="Primier">프리미어리그</string>
+    <string name="Champions">챔피언스</string>
+    <string name="K_league">K리그</string>
+    <string name="Laliga">라리가</string>
+    <string name="Bunleague">분데리스가</string>
+    <string name="Ligue_1">리그앙</string>
+    <string name="Friendlies">친선전</string>
+    <string name="Serie_A">세리아A</string>
 </resources>
