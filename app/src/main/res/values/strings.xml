@@ -8,4 +8,6 @@
     <string name="Ligue_1">리그앙</string>
     <string name="Friendlies">친선전</string>
     <string name="Serie_A">세리아A</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
