@@ -3,7 +3,6 @@ package soccer.diary.footballapp.features.home
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.ViewModelProvider
@@ -14,6 +13,7 @@ import soccer.diary.footballapp.R
 import soccer.diary.footballapp.databinding.ActivityMainBinding
 import soccer.diary.footballapp.model.FixturesResponse
 import soccer.diary.footballapp.model.Leagues
+import soccer.diary.footballapp.model.ResponseObserver
 import soccer.diary.footballapp.model.gameItem
 import java.text.SimpleDateFormat
 import java.util.*
@@ -48,12 +48,13 @@ class MainActivity : AppCompatActivity(), ResponseObserver {
         val Lalliga = resources.getDrawable(R.drawable.laliga_logo, null)
         val kligue = resources.getDrawable(R.drawable.kleague_logo, null)
         val leaguesList = mutableListOf<Leagues>()
-        leaguesList.add(Leagues(R.string.Champions.toString(), cl))
-        leaguesList.add(Leagues(R.string.Primier.toString(), pl))
-        leaguesList.add(Leagues(R.string.Bunleague.toString(), bun))
-        leaguesList.add(Leagues(R.string.Ligue_1.toString(), ligue1))
-        leaguesList.add(Leagues(R.string.Laliga.toString(), Lalliga))
-        leaguesList.add(Leagues(R.string.K_league.toString(), kligue))
+
+        leaguesList.add(Leagues(2, cl))
+        leaguesList.add(Leagues(39, pl))
+        leaguesList.add(Leagues(78, bun))
+        leaguesList.add(Leagues(61, ligue1))
+        leaguesList.add(Leagues(140, Lalliga))
+        leaguesList.add(Leagues(292, kligue))
         Ladapter.listData = leaguesList
         LrecyclerView.adapter = Ladapter
 
@@ -72,45 +73,46 @@ class MainActivity : AppCompatActivity(), ResponseObserver {
         NrecyclerView.adapter = Nadapter
         NrecyclerView.addItemDecoration(VerticalItemDecorator(20))
 
-        val frendliesvalue = MyApplication.leaguePartHashMap[getString(R.string.Friendlies)]!!
-        viewModel.fixtures(frendliesvalue,year,previousDateString,dateString,this)
+
+        viewModel.fixtures(10,year,previousDateString,dateString,this)
     }
     override fun onFixturesResponseReceived(data: FixturesResponse) {
-        if(data.results==0){
-            binding.nogame.visibility = View.VISIBLE
-        }
-        else{
-            binding.nogame.visibility = View.INVISIBLE
-            for (i in data.response) {
-                val homeimg = i.teams.home.logo
-                val homescore = i.goals.home
-                val hometeam = i.teams.home.name
-                val awayimg = i.teams.away.logo
-                val awayscore = i.goals.away
-                val awayteam = i.teams.away.name
-                val startime = i.fixture.date
-                val status = i.fixture.status.short
-                var check: String
-                val regex = Regex("""(\d{2}-\d{2})T(\d{2}:\d{2})""")
-                val matchResult = regex.find(startime)
-                val monthDay = matchResult?.groupValues!![1]
-                val time = matchResult.groupValues[2]
+        runOnUiThread {
+            if (data.results == 0) {
+                binding.nogame.visibility = View.VISIBLE
+            } else {
+                binding.nogame.visibility = View.INVISIBLE
+                for (i in data.response) {
+                    val homeimg = i.teams.home.logo
+                    val homescore = i.goals.home
+                    val hometeam = i.teams.home.name
+                    val awayimg = i.teams.away.logo
+                    val awayscore = i.goals.away
+                    val awayteam = i.teams.away.name
+                    val startime = i.fixture.date
+                    val status = i.fixture.status.short
+                    var check: String
+                    val regex = Regex("""(\d{2}-\d{2})T(\d{2}:\d{2})""")
+                    val matchResult = regex.find(startime)
+                    val monthDay = matchResult?.groupValues!![1]
+                    val time = matchResult.groupValues[2]
 
-                if(status == "TBD" || status == "NS")  check="$monthDay($time)"
-                else if(status == "1H") check="전반"
-                else if(status == "HT") check="전반 종료"
-                else if(status == "2H") check="후반"
-                else if(status == "ET") check="추가시간"
-                else if(status =="BT") check="연장"
-                else if(status=="P") check ="승부차기"
-                else if(status == "SUSP" || status == "INT") check="경기 중단"
-                else if(status == "FT" || status == "AET" || status=="PEN") check="경기 종료"
-                else check="취소"
-                Nadapter.addItem(
-                    gameItem(homeimg,homescore,hometeam,awayimg,awayscore,awayteam,check)
-                )
+                    if (status == "TBD" || status == "NS") check = "$monthDay($time)"
+                    else if (status == "1H") check = "전반"
+                    else if (status == "HT") check = "전반 종료"
+                    else if (status == "2H") check = "후반"
+                    else if (status == "ET") check = "추가시간"
+                    else if (status == "BT") check = "연장"
+                    else if (status == "P") check = "승부차기"
+                    else if (status == "SUSP" || status == "INT") check = "경기 중단"
+                    else if (status == "FT" || status == "AET" || status == "PEN") check = "경기 종료"
+                    else check = "취소"
+                    Nadapter.addItem(
+                        gameItem(homeimg, homescore, hometeam, awayimg, awayscore, awayteam, check)
+                    )
+                }
+
             }
-
         }
 
     }

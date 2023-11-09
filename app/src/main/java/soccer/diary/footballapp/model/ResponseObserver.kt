@@ -1,4 +1,4 @@
-package soccer.diary.footballapp.features.home
+package soccer.diary.footballapp.model
 
 import android.content.Context
 import soccer.diary.footballapp.model.FixturesResponse

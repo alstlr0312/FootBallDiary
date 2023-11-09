@@ -1,4 +1,4 @@
-package soccer.diary.footballapp.features.home
+package soccer.diary.footballapp.features.LeagueDiary
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -6,12 +6,12 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.gson.Gson
 import com.unity.mynativeapp.network.RetrofitClient
-import soccer.diary.footballapp.model.FixturesResponse
 import soccer.diary.footballapp.model.ResponseObserver
+import soccer.diary.footballapp.model.FixturesResponse
 import java.io.IOException
 import java.util.*
 
-class MainViewModel : ViewModel() {
+class LeagueViewModel : ViewModel() {
     private val _toastMessage = MutableLiveData<String>()
     val toastMessage: LiveData<String> = _toastMessage
 
