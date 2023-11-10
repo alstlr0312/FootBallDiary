@@ -1,29 +1,35 @@
 package soccer.diary.footballapp.features.LeagueDiary
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import soccer.diary.footballapp.MyApplication
 import soccer.diary.footballapp.R
 import soccer.diary.footballapp.databinding.FragmentLeagueBinding
+import soccer.diary.footballapp.features.home.MainActivity
 import soccer.diary.footballapp.features.home.NationalAdapter
 import soccer.diary.footballapp.features.home.VerticalItemDecorator
 import soccer.diary.footballapp.model.FixturesResponse
 import soccer.diary.footballapp.model.ResponseObserver
 import soccer.diary.footballapp.model.gameItem
+import soccer.diary.footballapp.model.onBackPressedListener
 import java.text.SimpleDateFormat
 import java.util.*
 
-class LeagueFragment : Fragment(), ResponseObserver {
+class LeagueFragment : Fragment(), ResponseObserver, onBackPressedListener {
     private lateinit var Nadapter: NationalAdapter
     private lateinit var NrecyclerView: RecyclerView
     private lateinit var binding: FragmentLeagueBinding
     private val viewModel by viewModels<LeagueViewModel>()
+    var backPressedTime : Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -106,5 +112,8 @@ class LeagueFragment : Fragment(), ResponseObserver {
 
     }
 
+    override fun onBackPressed() {
+        requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+    }
 
 }

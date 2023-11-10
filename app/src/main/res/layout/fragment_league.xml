@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundcolor"
+    android:background="@color/white"
     tools:context=".features.LeagueDiary.LeagueFragment">
 
     <ImageView
@@ -59,6 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="90dp"
             android:text="오늘은 경기가 없습니다"
+            android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
             android:visibility="invisible"

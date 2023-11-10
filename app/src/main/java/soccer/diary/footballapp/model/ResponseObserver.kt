@@ -7,3 +7,7 @@ interface ResponseObserver {
     fun onFixturesResponseReceived(fixturesResponse: FixturesResponse)
     fun onFixturesResponseError()
 }
+
+interface onBackPressedListener {
+    fun onBackPressed()
+}

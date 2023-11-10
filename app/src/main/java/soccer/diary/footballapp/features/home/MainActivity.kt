@@ -11,10 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import soccer.diary.footballapp.MyApplication
 import soccer.diary.footballapp.R
 import soccer.diary.footballapp.databinding.ActivityMainBinding
-import soccer.diary.footballapp.model.FixturesResponse
-import soccer.diary.footballapp.model.Leagues
-import soccer.diary.footballapp.model.ResponseObserver
-import soccer.diary.footballapp.model.gameItem
+import soccer.diary.footballapp.model.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -39,7 +36,7 @@ class MainActivity : AppCompatActivity(), ResponseObserver {
 
         LrecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         LrecyclerView.setHasFixedSize(true)
-        LrecyclerView.addItemDecoration(HorizontalItemDecorator(20))
+        LrecyclerView.addItemDecoration(HorizontalItemDecorator(15  ))
 
         val cl = resources.getDrawable(R.drawable.cl_logo, null)
         val bun = resources.getDrawable(R.drawable.bun_logo, null)
@@ -119,5 +116,15 @@ class MainActivity : AppCompatActivity(), ResponseObserver {
 
     override fun onFixturesResponseError() {
 
+    }
+
+    override fun onBackPressed(){
+        val fragmentList = supportFragmentManager.fragments
+        for (fragment in fragmentList) {
+            if (fragment is onBackPressedListener) {
+                (fragment as onBackPressedListener).onBackPressed()
+                return
+            }
+        }
     }
 }
