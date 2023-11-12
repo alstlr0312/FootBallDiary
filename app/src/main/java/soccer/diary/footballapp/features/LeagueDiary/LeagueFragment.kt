@@ -68,11 +68,11 @@ class LeagueFragment : Fragment(), ResponseObserver, onBackPressedListener {
         when (code) {
             2 -> {
                 background.setImageResource(R.drawable.cham_background)
-                logo.setImageResource(R.drawable.cl_logo)
+                logo.setImageResource(R.drawable.cham_3)
             }
             39 -> {
                 background.setImageResource(R.drawable.primeir_background)
-                logo.setImageResource(R.drawable.pl_logo2)
+                logo.setImageResource(R.drawable.primer_light)
             }
             78 -> {
                 background.setImageResource(R.drawable.bun_background)
