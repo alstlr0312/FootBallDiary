@@ -19,7 +19,7 @@
                 android:topRightRadius="0dp"
                 android:bottomLeftRadius="60dp"
                 android:bottomRightRadius="60dp" />
-            <solid android:color="@color/primier_color" />
+            <solid android:color="@color/k_legue" />
         </shape>
     </item>
 </layer-list>

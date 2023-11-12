@@ -1,20 +1,15 @@
 package soccer.diary.footballapp.features.LeagueDiary
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import soccer.diary.footballapp.MyApplication
 import soccer.diary.footballapp.R
 import soccer.diary.footballapp.databinding.FragmentLeagueBinding
-import soccer.diary.footballapp.features.home.MainActivity
 import soccer.diary.footballapp.features.home.NationalAdapter
 import soccer.diary.footballapp.features.home.VerticalItemDecorator
 import soccer.diary.footballapp.model.FixturesResponse
@@ -29,6 +24,7 @@ class LeagueFragment : Fragment(), ResponseObserver, onBackPressedListener {
     private lateinit var NrecyclerView: RecyclerView
     private lateinit var binding: FragmentLeagueBinding
     private val viewModel by viewModels<LeagueViewModel>()
+    var code:Int = 0
     var backPressedTime : Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,6 +41,9 @@ class LeagueFragment : Fragment(), ResponseObserver, onBackPressedListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        arguments?.let {
+            code = it.getInt("code", 0)
+        }
         val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
         val currentDate = Calendar.getInstance().time
         val calendar = Calendar.getInstance()
@@ -54,20 +53,49 @@ class LeagueFragment : Fragment(), ResponseObserver, onBackPressedListener {
         val previousDate = calendar.time
         val previousDateString = dateFormat.format(previousDate)
         val dateString = dateFormat.format(currentDate)
-
+        setbackground(code)
         NrecyclerView = binding.LeagueRv
         Nadapter = NationalAdapter(requireContext())
         NrecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         NrecyclerView.adapter = Nadapter
         NrecyclerView.addItemDecoration(VerticalItemDecorator(20))
-        arguments?.let {
-            val code = it.getInt("code", 0)
-            viewModel.fixtures(code, year, previousDateString, dateString, this)
-        }
+        viewModel.fixtures(code, year, previousDateString, dateString, this)
 
     }
-
-
+    fun setbackground(code: Int) {
+        val background = binding.leagueBack
+        val logo = binding.leagueLogo
+        when (code) {
+            2 -> {
+                background.setImageResource(R.drawable.cham_background)
+                logo.setImageResource(R.drawable.cl_logo)
+            }
+            39 -> {
+                background.setImageResource(R.drawable.primeir_background)
+                logo.setImageResource(R.drawable.pl_logo2)
+            }
+            78 -> {
+                background.setImageResource(R.drawable.bun_background)
+                logo.setImageResource(R.drawable.bun_logo2)
+            }
+            61 -> {
+                background.setImageResource(R.drawable.legue_1_background)
+                logo.setImageResource(R.drawable.ligue1_logo)
+            }
+            140 -> {
+                background.setImageResource(R.drawable.lalgue_background)
+                logo.setImageResource(R.drawable.la_2)
+            }
+            292 -> {
+                background.setImageResource(R.drawable.kbackground)
+                logo.setImageResource(R.drawable.k_logo)
+            }
+            else -> {
+                background.setImageResource(R.drawable.primeir_background)
+                logo.setImageResource(R.drawable.pl_logo2)
+            }
+        }
+    }
     override fun onFixturesResponseReceived(data: FixturesResponse) {
         if(data.results==0){
             binding.nogame2.visibility = View.VISIBLE

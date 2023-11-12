@@ -13,4 +13,9 @@
     <color name="national_orange">#EDB370</color>
     <color name="primier_color">#660070</color>
     <color name="ligue_1_color">#02153C</color>
+    <color name="bun_color">#D10214</color>
+    <color name="cl_start_color">#A318D9</color>
+    <color name="cl_center_color">#060F52</color>
+    <color name="cl_end_color">#6EE3EA</color>
+    <color name="k_legue">#001648</color>
 </resources>

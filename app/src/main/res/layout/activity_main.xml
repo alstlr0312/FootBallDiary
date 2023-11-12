@@ -80,6 +80,9 @@
             android:id="@+id/national_rv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteX="1dp"
             tools:layout_editor_absoluteY="396dp" />
     </ScrollView>

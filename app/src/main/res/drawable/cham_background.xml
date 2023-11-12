@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Drop Shadow Stack -->
     <item> <shape> <padding android:top="0dp" android:right="0dp" android:bottom="3dp" android:left="0dp" /> <corners android:radius="60dp" /> <solid android:color="#000CCCCC" /> </shape> </item>
@@ -7,19 +6,20 @@
     <item> <shape> <padding android:top="0dp" android:right="0dp" android:bottom="3dp" android:left="0dp" /> <corners android:radius="60dp" /> <solid android:color="#60CCCCCC" /> </shape> </item>
     <item> <shape> <padding android:top="0dp" android:right="0dp" android:bottom="3dp" android:left="0dp" /> <corners android:radius="60dp" /> <solid android:color="#70CCCCCC" /> </shape> </item>
     <!-- Background -->
-
-    <item
-        android:bottom="0dp"
-        android:left="0dp"
-        android:right="0dp"
-        android:top="0dp">
+    <item>
         <shape android:shape="rectangle">
             <corners
                 android:topLeftRadius="0dp"
                 android:topRightRadius="0dp"
                 android:bottomLeftRadius="60dp"
                 android:bottomRightRadius="60dp" />
-            <solid android:color="@color/primier_color" />
+            <gradient
+                android:type="linear"
+                android:startColor="@color/cl_start_color"
+                android:centerColor="@color/cl_center_color"
+                android:endColor="@color/cl_end_color"
+                android:angle="135" />
+
         </shape>
     </item>
 </layer-list>

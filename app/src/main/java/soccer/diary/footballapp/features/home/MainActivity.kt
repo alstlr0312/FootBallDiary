@@ -66,7 +66,9 @@ class MainActivity : AppCompatActivity(), ResponseObserver {
         val dateString = dateFormat.format(currentDate)
         NrecyclerView = binding.nationalRv
         Nadapter = NationalAdapter(this)
-        NrecyclerView.layoutManager = LinearLayoutManager(this)
+        NrecyclerView.layoutManager = LinearLayoutManager(this).apply {
+            stackFromEnd = true
+        }
         NrecyclerView.adapter = Nadapter
         NrecyclerView.addItemDecoration(VerticalItemDecorator(20))
 
