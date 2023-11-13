@@ -37,8 +37,17 @@ object RetrofitClient{
             RAPIDAPI_TRUEWAY_PLACES_HOST,
             callback
         )
+    }
+    fun getstatus(Id:Int, callback: okhttp3.Callback) {
+        getRapidApiAsync(
+            String.format(Locale.US, "https://%s/v3/fixtures?id=%d", RAPIDAPI_TRUEWAY_PLACES_HOST, Id),
+            RAPIDAPI_KEY,
+            RAPIDAPI_TRUEWAY_PLACES_HOST,
+            callback
+        )
 
     }
+
 
 
 }
