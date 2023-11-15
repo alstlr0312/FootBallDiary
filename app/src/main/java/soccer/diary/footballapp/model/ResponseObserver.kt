@@ -1,13 +1,14 @@
 package soccer.diary.footballapp.model
 
-import android.content.Context
-import soccer.diary.footballapp.model.FixturesResponse
-
 interface ResponseObserver {
     fun onFixturesResponseReceived(fixturesResponse: FixturesResponse)
+
     fun onFixturesResponseError()
 }
-
+interface StatusResponseObserver {
+    fun onLineupResponseReceived(lineupsResponse: LineupsResponse)
+    fun onStatusResponseReceived(statusResponse: StatusResponse)
+}
 interface onBackPressedListener {
     fun onBackPressed()
 }

@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import androidx.recyclerview.widget.RecyclerView
 import soccer.diary.footballapp.R
+import soccer.diary.footballapp.databinding.League2ItemBinding
 import soccer.diary.footballapp.databinding.NationalItemBinding
 import soccer.diary.footballapp.model.gameItem
 
@@ -18,7 +19,7 @@ import soccer.diary.footballapp.model.gameItem
 class LeagueAdapter(private val context: Context) : RecyclerView.Adapter<LeagueAdapter.ViewHolder>() {
     var itemList = mutableListOf<gameItem>()
     private var listener : OnItemClickListener? = null
-    inner class ViewHolder(private val binding:NationalItemBinding) : RecyclerView.ViewHolder(binding.root), View.OnClickListener {
+    inner class ViewHolder(private val binding:League2ItemBinding) : RecyclerView.ViewHolder(binding.root), View.OnClickListener {
         init {
             itemView.setOnClickListener(this)
         }
@@ -46,7 +47,7 @@ class LeagueAdapter(private val context: Context) : RecyclerView.Adapter<LeagueA
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(NationalItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return ViewHolder(League2ItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

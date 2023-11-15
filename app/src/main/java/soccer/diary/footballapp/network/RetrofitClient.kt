@@ -1,15 +1,11 @@
 package com.unity.mynativeapp.network
 
 
-import android.util.Log
-import androidx.constraintlayout.widget.StateSet.TAG
-import com.google.gson.Gson
 import okhttp3.Callback
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import org.json.JSONException
-import org.json.JSONObject
-import soccer.diary.footballapp.model.FixturesResponse
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.util.*
 
 object RetrofitClient{
@@ -41,6 +37,15 @@ object RetrofitClient{
     fun getstatus(Id:Int, callback: okhttp3.Callback) {
         getRapidApiAsync(
             String.format(Locale.US, "https://%s/v3/fixtures?id=%d", RAPIDAPI_TRUEWAY_PLACES_HOST, Id),
+            RAPIDAPI_KEY,
+            RAPIDAPI_TRUEWAY_PLACES_HOST,
+            callback
+        )
+    }
+
+    fun getlineup(Id:Int, callback: okhttp3.Callback) {
+        getRapidApiAsync(
+            String.format(Locale.US, "https://%s/v3/fixtures/lineups?fixture=%d", RAPIDAPI_TRUEWAY_PLACES_HOST, Id),
             RAPIDAPI_KEY,
             RAPIDAPI_TRUEWAY_PLACES_HOST,
             callback

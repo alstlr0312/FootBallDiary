@@ -12,11 +12,7 @@ import java.io.IOException
 import java.util.*
 
 class LeagueViewModel : ViewModel() {
-    private val _toastMessage = MutableLiveData<String>()
-    val toastMessage: LiveData<String> = _toastMessage
 
-    private val _fixtureData = MutableLiveData<FixturesResponse?>()
-    val fixtureData: LiveData<FixturesResponse?> = _fixtureData
     fun fixtures(league:Int, season:Int, fromDate: String, toDate: String, observer: ResponseObserver){
         RetrofitClient.getfixtures(league,season,fromDate,toDate, object : okhttp3.Callback {
             override fun onFailure(call: okhttp3.Call, e: IOException) {

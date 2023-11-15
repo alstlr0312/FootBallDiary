@@ -1,18 +1,18 @@
-package soccer.diary.footballapp.features.home
+package soccer.diary.footballapp.features.status
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.google.gson.Gson
 import com.unity.mynativeapp.network.RetrofitClient
-import soccer.diary.footballapp.model.FixturesResponse
-import soccer.diary.footballapp.model.ResponseObserver
+import soccer.diary.footballapp.model.StatusResponse
+import soccer.diary.footballapp.model.StatusResponseObserver
 import java.io.IOException
 import java.util.*
 
-class MainViewModel : ViewModel() {
+class StatusViewModel : ViewModel() {
 
-    fun fixtures(league:Int, season:Int, fromDate: String, toDate: String, observer: ResponseObserver){
-        RetrofitClient.getfixtures(league,season,fromDate,toDate, object : okhttp3.Callback {
+    fun status(id:Int, observer: StatusResponseObserver){
+        RetrofitClient.getstatus(id, object : okhttp3.Callback {
             override fun onFailure(call: okhttp3.Call, e: IOException) {
                 Log.d("error","error")
             }
@@ -21,10 +21,10 @@ class MainViewModel : ViewModel() {
                 if (response.isSuccessful) {
                     Log.d("responseStr","responseStr")
                     val responseStr = response.body?.string()
-                    val data = Gson().fromJson(responseStr, FixturesResponse::class.java)
-                    observer.onFixturesResponseReceived(data)
+                    val data = Gson().fromJson(responseStr, StatusResponse::class.java)
+                    observer.onStatusResponseReceived(data)
                 } else {
-                    observer.onFixturesResponseError()
+
                 }
             }
         })
@@ -35,6 +35,7 @@ class MainViewModel : ViewModel() {
             e.printStackTrace()
         }
     }
+
 
 
 }
