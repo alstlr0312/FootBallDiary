@@ -27,10 +27,6 @@ class LeagueFragment : Fragment(), ResponseObserver, onBackPressedListener {
     var code:Int = 0
     var backPressedTime : Long = 0
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -116,7 +112,7 @@ class LeagueFragment : Fragment(), ResponseObserver, onBackPressedListener {
                 val matchResult = regex.find(startime)
                 val monthDay = matchResult?.groupValues!![1]
                 val time = matchResult.groupValues[2]
-
+                val id = i.fixture.id
                 if(status == "TBD" || status == "NS")  check="$monthDay($time)"
                 else if(status == "1H") check="전반"
                 else if(status == "HT") check="전반 종료"
@@ -128,7 +124,7 @@ class LeagueFragment : Fragment(), ResponseObserver, onBackPressedListener {
                 else if(status == "FT" || status == "AET" || status=="PEN") check="경기 종료"
                 else check="취소"
                 Nadapter.addItem(
-                    gameItem(homeimg,homescore,hometeam,awayimg,awayscore,awayteam,check)
+                    gameItem(homeimg, homescore, hometeam, awayimg, awayscore, awayteam, check, id)
                 )
             }
 

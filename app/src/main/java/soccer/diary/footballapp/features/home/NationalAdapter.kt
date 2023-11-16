@@ -3,15 +3,19 @@ package soccer.diary.footballapp.features.home
 import android.content.Context
 import android.graphics.Color
 import android.net.Uri
+import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import androidx.recyclerview.widget.RecyclerView
 import soccer.diary.footballapp.R
 import soccer.diary.footballapp.databinding.NationalItemBinding
+import soccer.diary.footballapp.features.LeagueDiary.LeagueFragment
+import soccer.diary.footballapp.features.status.StatusFragment
 import soccer.diary.footballapp.model.gameItem
 
 
@@ -34,8 +38,16 @@ class NationalAdapter(private val context: Context) : RecyclerView.Adapter<Natio
         }
         override fun onClick(v: View?) {
             val pos = adapterPosition
-            if (pos != RecyclerView.NO_POSITION) {
-                listener?.onItemClick(itemView, itemList[pos], pos)
+            if (position != RecyclerView.NO_POSITION) {
+                val leagues = itemList[position]
+                val fragment = StatusFragment()
+                val bundle = Bundle()
+                bundle.putInt("code", leagues.id)
+                fragment.arguments = bundle
+                val fragmentManager = (binding.root.context as AppCompatActivity).supportFragmentManager
+                fragmentManager.beginTransaction()
+                    .replace(R.id.fragment_container, fragment)
+                    .commit()
             }
         }
     }

@@ -2,7 +2,6 @@ package soccer.diary.footballapp.model
 
 
 import com.google.gson.annotations.SerializedName
-import java.io.Serializable
 
 data class gameItem(
     @SerializedName("homeimg")
@@ -19,6 +18,8 @@ data class gameItem(
     val awayteam: String,
     @SerializedName("startime")
     val startime: String,
+    @SerializedName("id")
+    val id: Int,
 )
 
 data class LineupsResponse(

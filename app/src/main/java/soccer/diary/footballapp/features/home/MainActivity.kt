@@ -8,7 +8,6 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.LinearLayoutManager
-import soccer.diary.footballapp.MyApplication
 import soccer.diary.footballapp.R
 import soccer.diary.footballapp.databinding.ActivityMainBinding
 import soccer.diary.footballapp.model.*
@@ -95,6 +94,7 @@ class MainActivity : AppCompatActivity(), ResponseObserver {
                     val matchResult = regex.find(startime)
                     val monthDay = matchResult?.groupValues!![1]
                     val time = matchResult.groupValues[2]
+                    val id = i.fixture.id
 
                     if (status == "TBD" || status == "NS") check = "$monthDay($time)"
                     else if (status == "1H") check = "전반"
@@ -107,7 +107,7 @@ class MainActivity : AppCompatActivity(), ResponseObserver {
                     else if (status == "FT" || status == "AET" || status == "PEN") check = "경기 종료"
                     else check = "취소"
                     Nadapter.addItem(
-                        gameItem(homeimg, homescore, hometeam, awayimg, awayscore, awayteam, check)
+                        gameItem(homeimg, homescore, hometeam, awayimg, awayscore, awayteam, check,id)
                     )
                 }
 
