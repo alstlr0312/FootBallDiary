@@ -1,6 +1,7 @@
 package soccer.diary.footballapp.features.LeagueDiary
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -126,6 +127,7 @@ class LeagueFragment : Fragment(), ResponseObserver, onBackPressedListener {
                 Nadapter.addItem(
                     gameItem(homeimg, homescore, hometeam, awayimg, awayscore, awayteam, check, id)
                 )
+                Log.d("id", id.toString())
             }
 
         }

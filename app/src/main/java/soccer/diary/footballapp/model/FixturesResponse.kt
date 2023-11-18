@@ -2,6 +2,7 @@ package soccer.diary.footballapp.model
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class gameItem(
     @SerializedName("homeimg")
@@ -22,20 +23,6 @@ data class gameItem(
     val id: Int,
 )
 
-data class LineupsResponse(
-    @SerializedName("errors")
-    val errors: List<Any>,
-    @SerializedName("get")
-    val `get`: String,
-    @SerializedName("paging")
-    val paging: Paging,
-    @SerializedName("parameters")
-    val parameters: Parameters,
-    @SerializedName("response")
-    val response: List<Response>,
-    @SerializedName("results")
-    val results: Int
-)
 data class StatusResponse(
     @SerializedName("errors")
     val errors: List<Any>,
@@ -46,9 +33,66 @@ data class StatusResponse(
     @SerializedName("parameters")
     val parameters: Parameters,
     @SerializedName("response")
-    val response: List<Response>,
+    val response: List<lineResponse>,
     @SerializedName("results")
     val results: Int
+) : Serializable
+
+data class lineResponse(
+    @SerializedName("events")
+    val events: List<Event>,
+    @SerializedName("fixture")
+    val fixture: Fixture,
+    @SerializedName("goals")
+    val goals: Goals,
+    @SerializedName("league")
+    val league: League,
+    @SerializedName("lineups")
+    val lineups: List<Lineup>,
+    @SerializedName("players")
+    val players: List<PlayerXXX>,
+    @SerializedName("score")
+    val score: Score,
+    @SerializedName("statistics")
+    val statistics: List<StatisticX>,
+    @SerializedName("teams")
+    val teams: Teams
+)
+data class linedata(
+    @SerializedName("homeimg")
+    val homeimg: String,
+    @SerializedName("homescore")
+    val homescore: Int,
+    @SerializedName("hometeam")
+    val hometeam: String,
+    @SerializedName("awayimg")
+    val awayimg: String,
+    @SerializedName("awayscore")
+    val awayscore: Int,
+    @SerializedName("awayteam")
+    val awayteam: String,
+    @SerializedName("startime")
+    val startime: String,
+    @SerializedName("id")
+    val id: Int,
+    @SerializedName("events")
+    val events: List<Event>,
+    @SerializedName("fixture")
+    val fixture: Fixture,
+    @SerializedName("goals")
+    val goals: Goals,
+    @SerializedName("league")
+    val league: League,
+    @SerializedName("lineups")
+    val lineups: List<Lineup>,
+    @SerializedName("players")
+    val players: List<PlayerXXX>,
+    @SerializedName("score")
+    val score: Score,
+    @SerializedName("statistics")
+    val statistics: List<StatisticX>,
+    @SerializedName("teams")
+    val teams: Teams
 )
 data class FixturesResponse(
     @SerializedName("errors")

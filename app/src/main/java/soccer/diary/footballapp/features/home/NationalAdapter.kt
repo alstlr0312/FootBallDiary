@@ -43,6 +43,7 @@ class NationalAdapter(private val context: Context) : RecyclerView.Adapter<Natio
                 val fragment = StatusFragment()
                 val bundle = Bundle()
                 bundle.putInt("code", leagues.id)
+                Log.d("code", leagues.id.toString())
                 fragment.arguments = bundle
                 val fragmentManager = (binding.root.context as AppCompatActivity).supportFragmentManager
                 fragmentManager.beginTransaction()

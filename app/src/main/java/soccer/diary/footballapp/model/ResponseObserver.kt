@@ -6,7 +6,6 @@ interface ResponseObserver {
     fun onFixturesResponseError()
 }
 interface StatusResponseObserver {
-    fun onLineupResponseReceived(lineupsResponse: LineupsResponse)
     fun onStatusResponseReceived(statusResponse: StatusResponse)
 }
 interface onBackPressedListener {

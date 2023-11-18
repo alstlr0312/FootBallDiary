@@ -3,6 +3,7 @@ package soccer.diary.footballapp.features.home
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.ViewModelProvider
@@ -109,6 +110,7 @@ class MainActivity : AppCompatActivity(), ResponseObserver {
                     Nadapter.addItem(
                         gameItem(homeimg, homescore, hometeam, awayimg, awayscore, awayteam, check,id)
                     )
+                    Log.d("id", id.toString())
                 }
 
             }
