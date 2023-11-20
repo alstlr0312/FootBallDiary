@@ -20,7 +20,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/leaguename"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -52,16 +52,6 @@
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
                 android:layout_marginBottom="10dp"/>
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="152dp"
-                android:layout_height="205dp"
-                android:layout_gravity="center"
-                android:src="@drawable/primer_light"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
 
         </FrameLayout>
@@ -80,7 +70,9 @@
                 android:layout_width="110dp"
                 android:layout_height="80dp"
                 android:layout_marginStart="16dp"
+                android:layout_weight="1"
                 android:src="@drawable/flag"
+                android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -90,6 +82,8 @@
                 android:layout_width="110dp"
                 android:layout_height="80dp"
                 android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
                 android:src="@drawable/flag"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -99,10 +93,10 @@
                 android:id="@+id/shome_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="18dp"
                 android:text="0"
                 android:textColor="@color/black"
-                android:textSize="30dp"
+                android:textSize="40dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/shome_img"
                 app:layout_constraintStart_toEndOf="@+id/shome_img"
@@ -112,10 +106,10 @@
                 android:id="@+id/saway_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="18dp"
                 android:text="0"
                 android:textColor="@color/black"
-                android:textSize="30dp"
+                android:textSize="40dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/saway_img"
                 app:layout_constraintEnd_toStartOf="@+id/saway_img"
@@ -127,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:text=":"
                 android:textColor="@color/black"
-                android:textSize="30dp"
+                android:textSize="40dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/shome_score"
                 app:layout_constraintEnd_toStartOf="@+id/saway_score"

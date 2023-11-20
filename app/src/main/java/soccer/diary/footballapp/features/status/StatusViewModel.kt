@@ -19,7 +19,6 @@ class StatusViewModel : ViewModel() {
             @Throws(IOException::class)
             override fun onResponse(call: okhttp3.Call, response: okhttp3.Response) {
                 if (response.isSuccessful) {
-
                     val responseStr = response.body?.string()
                     Log.d("responseStr",responseStr.toString())
                     val data = Gson().fromJson(responseStr, StatusResponse::class.java)

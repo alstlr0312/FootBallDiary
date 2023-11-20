@@ -477,7 +477,7 @@ data class StatisticXX(
     @SerializedName("type")
     val type: String,
     @SerializedName("value")
-    val value: Int
+    val value: Any
 )
 data class Substitute(
     @SerializedName("player")
