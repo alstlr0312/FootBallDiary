@@ -2,54 +2,68 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
     <ProgressBar
-        android:id="@+id/bar"
+        android:id="@+id/home_bar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="290dp"
+        android:layout_width="140dp"
         android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:layout_gravity="center_vertical"
+        android:rotation="180"
         android:progressDrawable="@drawable/progressbar1"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stext" />
+        app:layout_constraintTop_toBottomOf="@+id/sname" />
+
+    <ProgressBar
+        android:id="@+id/away_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="140dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="8dp"
+        android:progressDrawable="@drawable/progressbar2"
+        app:layout_constraintBottom_toBottomOf="@+id/home_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/home_bar"
+        app:layout_constraintTop_toTopOf="@+id/home_bar" />
 
     <TextView
         android:id="@+id/home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginEnd="4dp"
         android:text="0"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/bar"
-        app:layout_constraintStart_toStartOf="@+id/bar"
-        app:layout_constraintTop_toTopOf="@+id/bar"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/home_bar"
+        app:layout_constraintTop_toTopOf="@+id/home_bar" />
 
     <TextView
         android:id="@+id/away"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="4dp"
         android:text="0"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/bar"
-        app:layout_constraintEnd_toEndOf="@+id/bar"
-        app:layout_constraintTop_toTopOf="@+id/bar" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/away_bar"
+        app:layout_constraintTop_toTopOf="@+id/away_bar" />
 
     <TextView
-        android:id="@+id/stext"
+        android:id="@+id/sname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="유효슛팅"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/away_bar"
+        app:layout_constraintStart_toStartOf="@+id/home_bar"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

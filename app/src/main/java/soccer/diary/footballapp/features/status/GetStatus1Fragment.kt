@@ -44,9 +44,7 @@ class GetStatus1Fragment : Fragment() {
             val excludedIndices = setOf(2, 4, 5, 14)
             for (i in 0 until 2) {
                 for (j in 0 until 16) {
-
                         statics[i][j] = data.response[0].statistics[i].statistics[j].value
-
                 }
             }
             val indicesToRemove = listOf(1, 3, 4, 5, 14)

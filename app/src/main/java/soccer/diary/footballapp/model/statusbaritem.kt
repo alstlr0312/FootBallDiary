@@ -9,5 +9,12 @@ class statusbaritem (
     val homescore: Any,
     @SerializedName("awayscore")
     val awayscore: Any,
-
+)
+class lineupitem (
+    @SerializedName("num")
+    val num: Int,
+    @SerializedName("name")
+    val name: String,
+    @SerializedName("postion")
+    val postion: String,
 )

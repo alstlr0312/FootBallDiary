@@ -49,14 +49,17 @@ class LeagueFragment : Fragment(), ResponseObserver, onBackPressedListener {
         calendar.add(Calendar.DAY_OF_MONTH, -1)
         val previousDate = calendar.time
         val previousDateString = dateFormat.format(previousDate)
-        val dateString = dateFormat.format(currentDate)
+        calendar.time = currentDate
+        calendar.add(Calendar.DAY_OF_MONTH, 2)
+        val nextDate = calendar.time
+        val nextDateString = dateFormat.format(nextDate)
         setbackground(code)
         NrecyclerView = binding.LeagueRv
         Nadapter = NationalAdapter(requireContext())
         NrecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         NrecyclerView.adapter = Nadapter
         NrecyclerView.addItemDecoration(VerticalItemDecorator(20))
-        viewModel.fixtures(code, year, previousDateString, dateString, this)
+        viewModel.fixtures(code, year, previousDateString, nextDateString, this)
 
     }
     fun setbackground(code: Int) {

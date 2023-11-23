@@ -29,9 +29,11 @@ class StatusbarAdapter(private val context: Context) : RecyclerView.Adapter<Stat
                 val home = item.homescore.toInt()
                 val away = item.awayscore.toInt()
                 val all = home+away
-                binding.bar.max = all
-                binding.bar.setProgress(home)
-                binding.stext.text=item.statusname
+                binding.homeBar.max = all
+                binding.homeBar.setProgress(home)
+                binding.awayBar.max = all
+                binding.awayBar.setProgress(away)
+                binding.sname.text=item.statusname
                 binding.home.text=home.toString()
                 binding.away.text=away.toString()
             }else if(item.homescore is String && item.awayscore is String ){
@@ -42,19 +44,22 @@ class StatusbarAdapter(private val context: Context) : RecyclerView.Adapter<Stat
                 val home = homeScoreWithoutPercent.toIntOrNull() ?: 0
                 val away = awayScoreWithoutPercent.toIntOrNull() ?: 0
                 val all = home + away
-                binding.bar.max = all
-                binding.bar.setProgress(home)
-                binding.stext.text=item.statusname
+                binding.homeBar.max = all
+                binding.homeBar.setProgress(home)
+                binding.awayBar.max = all
+                binding.awayBar.setProgress(away)
+                binding.sname.text=item.statusname
                 binding.home.text = homeString
                 binding.away.text = awayString
             }else{
                 val home = item.homescore?.let { if (it is Double) it.toInt() else it.toString().replace("%", "").toIntOrNull() ?: 0 } ?: 0
                 val away = item.awayscore?.let { if (it is Double) it.toInt() else it.toString().replace("%", "").toIntOrNull() ?: 0 } ?: 0
                 val all = home + away
-
-                binding.bar.max = all
-                binding.bar.setProgress(home)
-                binding.stext.text = item.statusname
+                binding.homeBar.max = all
+                binding.homeBar.setProgress(home)
+                binding.awayBar.max = all
+                binding.awayBar.setProgress(away)
+                binding.sname.text = item.statusname
                 binding.home.text = item.homescore?.toString() ?: "0"
                 binding.away.text = item.awayscore?.toString() ?: "0"
             }
