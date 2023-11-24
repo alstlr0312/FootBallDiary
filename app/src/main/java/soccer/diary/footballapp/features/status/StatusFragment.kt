@@ -32,7 +32,7 @@ class StatusFragment : Fragment(), StatusResponseObserver, onBackPressedListener
         super.onViewCreated(view, savedInstanceState)
         arguments?.let {
             code = it.getInt("code", 0)
-            viewModel.status(157201, this)
+            viewModel.status(code, this)
         }
     }
 
@@ -90,9 +90,11 @@ class StatusFragment : Fragment(), StatusResponseObserver, onBackPressedListener
             getStatus3Fragment.arguments = bundle
 
             viewPager2Adapter.addFragment(getStatus1Fragment)
-            viewPager2Adapter.addFragment(getStatus2Fragment)
-            viewPager2Adapter.addFragment(getStatus3Fragment)
 
+            if( status != "NS") {
+                viewPager2Adapter.addFragment(getStatus2Fragment)
+                viewPager2Adapter.addFragment(getStatus3Fragment)
+            }
             viewPager2Adapter.notifyDataSetChanged()
             binding.vpViewpagerMain.adapter = viewPager2Adapter
         }
