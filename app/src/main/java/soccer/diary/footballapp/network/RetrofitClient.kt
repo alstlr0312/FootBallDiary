@@ -6,6 +6,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import soccer.diary.footballapp.network.ApiService
 import java.util.*
 
 object RetrofitClient{
@@ -13,46 +14,23 @@ object RetrofitClient{
     val RAPIDAPI_KEY = "f025adefbemsh766b45786eeb4d1p1c1965jsn15a96dfa4752"
     val RAPIDAPI_TRUEWAY_PLACES_HOST = "api-football-v1.p.rapidapi.com"
 
-    private val client = OkHttpClient()
+    private const val BASE_URL = "https://api-football-v1.p.rapidapi.com/"
 
-    fun getRapidApiAsync(url: String, rapidApiKey: String, rapidApiHost: String, callback: Callback) {
-        val request = Request.Builder()
-            .url(url)
-            .get()
-            .addHeader("x-rapidapi-key", rapidApiKey)
-            .addHeader("x-rapidapi-host", rapidApiHost)
-            .build()
-        val call = client.newCall(request)
-        call.enqueue(callback)
-    }
+    private val client = OkHttpClient.Builder()
+        .addInterceptor { chain ->
+            val newRequest = chain.request().newBuilder()
+                .addHeader("x-rapidapi-key", RAPIDAPI_KEY)
+                .addHeader("x-rapidapi-host", RAPIDAPI_TRUEWAY_PLACES_HOST)
+                .build()
+            chain.proceed(newRequest)
+        }
+        .build()
 
-    fun getfixtures(league:Int, season:Int, fromDate: String, toDate: String, callback: okhttp3.Callback) {
-        getRapidApiAsync(
-            String.format(Locale.US, "https://%s/v3/fixtures?league=%d&season=%d&from=%s&to=%s", RAPIDAPI_TRUEWAY_PLACES_HOST, league, season, fromDate, toDate),
-            RAPIDAPI_KEY,
-            RAPIDAPI_TRUEWAY_PLACES_HOST,
-            callback
-        )
-    }
-    fun getstatus(Id:Int, callback: okhttp3.Callback) {
-        getRapidApiAsync(
-            String.format(Locale.US, "https://%s/v3/fixtures?id=%d", RAPIDAPI_TRUEWAY_PLACES_HOST, Id),
-            RAPIDAPI_KEY,
-            RAPIDAPI_TRUEWAY_PLACES_HOST,
-            callback
-        )
-    }
+    private val retrofit = Retrofit.Builder()
+        .baseUrl(BASE_URL)
+        .addConverterFactory(GsonConverterFactory.create())
+        .client(client)
+        .build()
 
-    fun getlineup(Id:Int, callback: okhttp3.Callback) {
-        getRapidApiAsync(
-            String.format(Locale.US, "https://%s/v3/fixtures/lineups?fixture=%d", RAPIDAPI_TRUEWAY_PLACES_HOST, Id),
-            RAPIDAPI_KEY,
-            RAPIDAPI_TRUEWAY_PLACES_HOST,
-            callback
-        )
-
-    }
-
-
-
+    val apiService: ApiService = retrofit.create(ApiService::class.java)
 }

@@ -37,6 +37,9 @@ android {
 }
 
 dependencies {
+    //coroutine
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
+
     //splash api
     implementation "androidx.core:core-splashscreen:1.0.1"
 

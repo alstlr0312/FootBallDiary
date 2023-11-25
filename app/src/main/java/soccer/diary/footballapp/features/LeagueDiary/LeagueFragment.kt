@@ -20,7 +20,7 @@ import soccer.diary.footballapp.model.onBackPressedListener
 import java.text.SimpleDateFormat
 import java.util.*
 
-class LeagueFragment : Fragment(), ResponseObserver, onBackPressedListener {
+class LeagueFragment : Fragment(), onBackPressedListener {
     private lateinit var Nadapter: NationalAdapter
     private lateinit var NrecyclerView: RecyclerView
     private lateinit var binding: FragmentLeagueBinding
@@ -59,8 +59,8 @@ class LeagueFragment : Fragment(), ResponseObserver, onBackPressedListener {
         NrecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         NrecyclerView.adapter = Nadapter
         NrecyclerView.addItemDecoration(VerticalItemDecorator(20))
-        viewModel.fixtures(code, year, previousDateString, nextDateString, this)
-
+        viewModel.getFixtures(code, year, previousDateString, nextDateString)
+        subscribeUI()
     }
     fun setbackground(code: Int) {
         val background = binding.leagueBack
@@ -96,53 +96,63 @@ class LeagueFragment : Fragment(), ResponseObserver, onBackPressedListener {
             }
         }
     }
-    override fun onFixturesResponseReceived(data: FixturesResponse) {
-        if(data.results==0){
-            binding.nogame2.visibility = View.VISIBLE
-        }
-        else{
-            binding.nogame2.visibility = View.INVISIBLE
-            for (i in data.response) {
-                val homeimg = i.teams.home.logo
-                val homescore = i.goals.home
-                val hometeam = i.teams.home.name
-                val awayimg = i.teams.away.logo
-                val awayscore = i.goals.away
-                val awayteam = i.teams.away.name
-                val startime = i.fixture.date
-                val status = i.fixture.status.short
-                var check: String
-                val regex = Regex("""(\d{2}-\d{2})T(\d{2}:\d{2})""")
-                val matchResult = regex.find(startime)
-                val monthDay = matchResult?.groupValues!![1]
-                val time = matchResult.groupValues[2]
-                val id = i.fixture.id
-                if(status == "TBD" || status == "NS")  check="$monthDay($time)"
-                else if(status == "1H") check="전반"
-                else if(status == "HT") check="전반 종료"
-                else if(status == "2H") check="후반"
-                else if(status == "ET") check="추가시간"
-                else if(status =="BT") check="연장"
-                else if(status=="P") check ="승부차기"
-                else if(status == "SUSP" || status == "INT") check="경기 중단"
-                else if(status == "FT" || status == "AET" || status=="PEN") check="경기 종료"
-                else check="취소"
-                Nadapter.addItem(
-                    gameItem(homeimg, homescore, hometeam, awayimg, awayscore, awayteam, check, id)
-                )
-                Log.d("id", id.toString())
-            }
 
-        }
-
-    }
-
-    override fun onFixturesResponseError() {
-
-    }
 
     override fun onBackPressed() {
         requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
     }
+
+    private fun subscribeUI() {
+        viewModel.fixturesResponse.observe(viewLifecycleOwner) { data ->
+            if (data.results == 0) {
+                binding.nogame2.visibility = View.VISIBLE
+            } else {
+                binding.nogame2.visibility = View.INVISIBLE
+                for (i in data.response) {
+                    val homeimg = i.teams.home.logo
+                    val homescore = i.goals.home
+                    val hometeam = i.teams.home.name
+                    val awayimg = i.teams.away.logo
+                    val awayscore = i.goals.away
+                    val awayteam = i.teams.away.name
+                    val startime = i.fixture.date
+                    val status = i.fixture.status.short
+                    var check: String
+                    val regex = Regex("""(\d{2}-\d{2})T(\d{2}:\d{2})""")
+                    val matchResult = regex.find(startime)
+                    val monthDay = matchResult?.groupValues!![1]
+                    val time = matchResult.groupValues[2]
+                    val id = i.fixture.id
+
+                    if (status == "TBD" || status == "NS") check = "$monthDay($time)"
+                    else if (status == "1H") check = "전반"
+                    else if (status == "HT") check = "전반 종료"
+                    else if (status == "2H") check = "후반"
+                    else if (status == "ET") check = "추가시간"
+                    else if (status == "BT") check = "연장"
+                    else if (status == "P") check = "승부차기"
+                    else if (status == "SUSP" || status == "INT") check = "경기 중단"
+                    else if (status == "FT" || status == "AET" || status == "PEN") check =
+                        "경기 종료"
+                    else check = "취소"
+                    Nadapter.addItem(
+                        gameItem(
+                            homeimg,
+                            homescore,
+                            hometeam,
+                            awayimg,
+                            awayscore,
+                            awayteam,
+                            check,
+                            id
+                        )
+                    )
+                    Log.d("id", id.toString())
+                }
+
+            }
+        }
+    }
+
 
 }

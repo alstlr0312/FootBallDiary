@@ -42,7 +42,6 @@ class GetStatus2Fragment : Fragment() {
             subadapter = SublineupAdapter(requireContext())
             subrecyclerView.layoutManager = GridLayoutManager(requireContext(), 3, LinearLayoutManager.VERTICAL, false)
             subrecyclerView.adapter = subadapter
-
             val data = it.getSerializable("data") as StatusResponse
             val lineup = data.response[0].lineups[0]
             val formation = lineup.formation

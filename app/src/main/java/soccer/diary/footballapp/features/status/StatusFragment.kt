@@ -13,7 +13,7 @@ import com.bumptech.glide.Glide
 import soccer.diary.footballapp.databinding.FragmentStatusBinding
 import soccer.diary.footballapp.model.*
 
-class StatusFragment : Fragment(), StatusResponseObserver, onBackPressedListener {
+class StatusFragment : Fragment(), onBackPressedListener {
     private lateinit var binding: FragmentStatusBinding
     private val viewModel by viewModels<StatusViewModel>()
     var code: Int = 0
@@ -32,7 +32,8 @@ class StatusFragment : Fragment(), StatusResponseObserver, onBackPressedListener
         super.onViewCreated(view, savedInstanceState)
         arguments?.let {
             code = it.getInt("code", 0)
-            viewModel.status(code, this)
+            viewModel.status(code)
+            subscribeUI()
         }
     }
 
@@ -44,9 +45,9 @@ class StatusFragment : Fragment(), StatusResponseObserver, onBackPressedListener
         requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
     }
 
-    override fun onStatusResponseReceived(data: StatusResponse) {
 
-        requireActivity().runOnUiThread {
+    private fun subscribeUI() {
+        viewModel.statusResponse.observe(viewLifecycleOwner) { data ->
             val homeimg = data.response[0].teams.home.logo
             val homescore = data.response[0].goals.home
             binding.shomeScore.text = homescore.toString()
@@ -97,6 +98,9 @@ class StatusFragment : Fragment(), StatusResponseObserver, onBackPressedListener
             }
             viewPager2Adapter.notifyDataSetChanged()
             binding.vpViewpagerMain.adapter = viewPager2Adapter
+
         }
     }
+
+
 }
