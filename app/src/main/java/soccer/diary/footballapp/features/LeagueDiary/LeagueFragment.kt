@@ -50,7 +50,7 @@ class LeagueFragment : Fragment(), onBackPressedListener {
         val previousDate = calendar.time
         val previousDateString = dateFormat.format(previousDate)
         calendar.time = currentDate
-        calendar.add(Calendar.DAY_OF_MONTH, 2)
+        calendar.add(Calendar.DAY_OF_MONTH, 1)
         val nextDate = calendar.time
         val nextDateString = dateFormat.format(nextDate)
         setbackground(code)
@@ -103,12 +103,16 @@ class LeagueFragment : Fragment(), onBackPressedListener {
     }
 
     private fun subscribeUI() {
+        viewModel.fixturesResponse.removeObservers(viewLifecycleOwner)
         viewModel.fixturesResponse.observe(viewLifecycleOwner) { data ->
             if (data.results == 0) {
                 binding.nogame2.visibility = View.VISIBLE
             } else {
                 binding.nogame2.visibility = View.INVISIBLE
-                for (i in data.response) {
+                val distinctResponse = data.response.distinctBy { it.fixture.date }
+                val sortedResponse = distinctResponse.sortedWith(compareBy { it.fixture.date })
+                Log.d("id", sortedResponse.size.toString())
+                for (i in sortedResponse) {
                     val homeimg = i.teams.home.logo
                     val homescore = i.goals.home
                     val hometeam = i.teams.home.name
@@ -123,8 +127,15 @@ class LeagueFragment : Fragment(), onBackPressedListener {
                     val monthDay = matchResult?.groupValues!![1]
                     val time = matchResult.groupValues[2]
                     val id = i.fixture.id
-
-                    if (status == "TBD" || status == "NS") check = "$monthDay($time)"
+                    val dateFormat = SimpleDateFormat("MM-dd HH:mm", Locale.getDefault())
+                    dateFormat.timeZone = TimeZone.getTimeZone("Europe/London")
+                    val startDateTime = dateFormat.parse("$monthDay $time")
+                    dateFormat.timeZone = TimeZone.getTimeZone("Asia/Seoul")
+                    val calendar = Calendar.getInstance()
+                    calendar.time = startDateTime
+                    calendar.add(Calendar.HOUR_OF_DAY, 1)//영국 서머 타임때문에 +1시간 해야함
+                    val koreaTime = dateFormat.format(calendar.time)
+                    if (status == "TBD" || status == "NS") check = "$koreaTime"
                     else if (status == "1H") check = "전반"
                     else if (status == "HT") check = "전반 종료"
                     else if (status == "2H") check = "후반"
@@ -132,21 +143,9 @@ class LeagueFragment : Fragment(), onBackPressedListener {
                     else if (status == "BT") check = "연장"
                     else if (status == "P") check = "승부차기"
                     else if (status == "SUSP" || status == "INT") check = "경기 중단"
-                    else if (status == "FT" || status == "AET" || status == "PEN") check =
-                        "경기 종료"
+                    else if (status == "FT" || status == "AET" || status == "PEN") check = "경기 종료"
                     else check = "취소"
-                    Nadapter.addItem(
-                        gameItem(
-                            homeimg,
-                            homescore,
-                            hometeam,
-                            awayimg,
-                            awayscore,
-                            awayteam,
-                            check,
-                            id
-                        )
-                    )
+                    Nadapter.addItem(gameItem(homeimg, homescore, hometeam, awayimg, awayscore, awayteam, check, id))
                     Log.d("id", id.toString())
                 }
 

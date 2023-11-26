@@ -43,35 +43,39 @@ class GetStatus2Fragment : Fragment() {
             subrecyclerView.layoutManager = GridLayoutManager(requireContext(), 3, LinearLayoutManager.VERTICAL, false)
             subrecyclerView.adapter = subadapter
             val data = it.getSerializable("data") as StatusResponse
-            val lineup = data.response[0].lineups[0]
-            val formation = lineup.formation
-            val coach = lineup.coach.name
-            val team = lineup.team.name
-            Log.d("chflkd",formation)
-            Log.d("chflkd2",coach)
-            binding.formation.text=formation
-            binding.coachName.text=coach
 
-            val flag = data.response[0].teams.home.logo
-            Glide.with(requireContext()).load(Uri.parse(flag)).into(binding.homeFlag)
+            if (data.response.isNotEmpty() && data.response[0].lineups.isNotEmpty()) {
+                val lineup = data.response[0].lineups[0]
+                val formation = lineup.formation
+                val coach = lineup.coach.name
+                val team = lineup.team.name
+                Log.d("chflkd", formation)
+                Log.d("chflkd2", coach)
+                binding.formation.text = formation
+                binding.coachName.text = coach
 
-            for(i in lineup.startXI){
-                val num = i.player.number
-                val name = i.player.name
-                val postion = i.player.pos
-                adapter.addItem(
-                    lineupitem(num,name,postion)
-                )
+                val flag = data.response[0].teams.home.logo
+                Glide.with(requireContext()).load(Uri.parse(flag)).into(binding.homeFlag)
+
+                for (i in lineup.startXI) {
+                    val num = i.player.number
+                    val name = i.player.name
+                    val postion = i.player.pos
+                    adapter.addItem(
+                        lineupitem(num, name, postion)
+                    )
+                }
+                for (i in lineup.substitutes) {
+                    val num = i.player.number
+                    val name = i.player.name
+                    val postion = i.player.pos
+                    subadapter.addItem(
+                        lineupitem(num, name, postion)
+                    )
+                }
+            }else{
+
             }
-            for(i in lineup.substitutes){
-                val num = i.player.number
-                val name = i.player.name
-                val postion = i.player.pos
-                subadapter.addItem(
-                    lineupitem(num,name,postion)
-                )
-            }
-
         }
     }
 

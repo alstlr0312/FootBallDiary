@@ -101,7 +101,9 @@ class MainActivity : AppCompatActivity() {
                     binding.nogame.visibility = View.VISIBLE
                 } else {
                     binding.nogame.visibility = View.INVISIBLE
-                    for (i in data.response) {
+                    val sortedResponse = data.response.sortedBy { it.fixture.date }
+
+                    for (i in sortedResponse) {
                         val homeimg = i.teams.home.logo
                         val homescore = i.goals.home
                         val hometeam = i.teams.home.name

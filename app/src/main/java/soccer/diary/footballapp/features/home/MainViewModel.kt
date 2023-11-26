@@ -16,7 +16,6 @@ class MainViewModel : ViewModel() {
         viewModelScope.launch {
             val response = RetrofitClient.apiService.getFixtures(league, season, fromDate, toDate)
             if (response.isSuccessful) {
-                fixturesResponse.value = response.body()
                 fixturesResponse.postValue(response.body())
             }
         }

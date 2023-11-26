@@ -41,42 +41,46 @@ class GetStatus3Fragment : Fragment() {
         arguments?.let {
             recyclerView = binding.startRv
             adapter = LineupAdapter(requireContext())
-            recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+            recyclerView.layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
             recyclerView.adapter = adapter
 
             subrecyclerView = binding.subRv
             subadapter = SublineupAdapter(requireContext())
-            subrecyclerView.layoutManager = GridLayoutManager(requireContext(), 3, LinearLayoutManager.VERTICAL, false)
+            subrecyclerView.layoutManager =
+                GridLayoutManager(requireContext(), 3, LinearLayoutManager.VERTICAL, false)
             subrecyclerView.adapter = subadapter
 
             val data = it.getSerializable("data") as StatusResponse
-            val lineup = data.response[0].lineups[1]
-            val formation = lineup.formation
-            val coach = lineup.coach.name
-            val team = lineup.team.name
-            Log.d("chflkd",formation)
-            Log.d("chflkd2",coach)
-            binding.formation.text=formation
-            binding.coachName.text=coach
+            if (data.response.isNotEmpty() && data.response[0].lineups.isNotEmpty()) {
+                val lineup = data.response[0].lineups[0] // 첫 번째 lineup을 사용
+                val formation = lineup.formation
+                val coach = lineup.coach.name
+                val team = lineup.team.name
+                Log.d("chflkd", formation)
+                Log.d("chflkd2", coach)
+                binding.formation.text = formation
+                binding.coachName.text = coach
 
-            val flag = data.response[0].teams.away.logo
-            Glide.with(requireContext()).load(Uri.parse(flag)).into(binding.awayFlag)
+                val flag = data.response[0].teams.away.logo
+                Glide.with(requireContext()).load(Uri.parse(flag)).into(binding.awayFlag)
 
-            for(i in lineup.startXI){
-                val num = i.player.number
-                val name = i.player.name
-                val postion = i.player.pos
-                adapter.addItem(
-                    lineupitem(num,name,postion)
-                )
-            }
-            for(i in lineup.substitutes){
-                val num = i.player.number
-                val name = i.player.name
-                val postion = i.player.pos
-                subadapter.addItem(
-                    lineupitem(num,name,postion)
-                )
+                for (i in lineup.startXI) {
+                    val num = i.player.number
+                    val name = i.player.name
+                    val postion = i.player.pos
+                    adapter.addItem(
+                        lineupitem(num, name, postion)
+                    )
+                }
+                for (i in lineup.substitutes) {
+                    val num = i.player.number
+                    val name = i.player.name
+                    val postion = i.player.pos
+                    subadapter.addItem(
+                        lineupitem(num, name, postion)
+                    )
+                }
             }
 
         }

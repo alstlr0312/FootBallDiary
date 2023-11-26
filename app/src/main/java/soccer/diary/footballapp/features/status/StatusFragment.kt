@@ -38,9 +38,6 @@ class StatusFragment : Fragment(), onBackPressedListener {
     }
 
 
-
-
-
     override fun onBackPressed() {
         requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
     }
@@ -92,10 +89,9 @@ class StatusFragment : Fragment(), onBackPressedListener {
 
             viewPager2Adapter.addFragment(getStatus1Fragment)
 
-            if( status != "NS") {
-                viewPager2Adapter.addFragment(getStatus2Fragment)
-                viewPager2Adapter.addFragment(getStatus3Fragment)
-            }
+            viewPager2Adapter.addFragment(getStatus2Fragment)
+            viewPager2Adapter.addFragment(getStatus3Fragment)
+
             viewPager2Adapter.notifyDataSetChanged()
             binding.vpViewpagerMain.adapter = viewPager2Adapter
 
