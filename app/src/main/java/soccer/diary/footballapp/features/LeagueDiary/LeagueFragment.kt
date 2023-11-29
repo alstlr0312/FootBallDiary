@@ -46,7 +46,7 @@ class LeagueFragment : Fragment(), onBackPressedListener {
         val calendar = Calendar.getInstance()
         val year = calendar.get(Calendar.YEAR)
         calendar.time = currentDate
-        calendar.add(Calendar.DAY_OF_MONTH, -1)
+        calendar.add(Calendar.DAY_OF_MONTH, -2)
         val previousDate = calendar.time
         val previousDateString = dateFormat.format(previousDate)
         calendar.time = currentDate

@@ -37,101 +37,251 @@
             app:layout_constraintTop_toTopOf="@+id/imageView3"
             app:layout_constraintVertical_bias="1.0">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/gk352"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_width="50dp"
+                android:textColor="@color/black"
+                android:layout_height="50dp"
+                android:background="@drawable/round_btn"
                 android:layout_marginBottom="16dp"
                 android:text="Button"
+                android:textStyle="bold"
+                android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
-
-            <Button
-                android:id="@+id/cb352_1"
+            <TextView
+                android:id="@+id/gk352t"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/gk352"
+                app:layout_constraintStart_toStartOf="@+id/gk352"
+                app:layout_constraintTop_toBottomOf="@+id/gk352">
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cb352_1"
+                android:textSize="10sp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:background="@drawable/round_btn"
+                android:textStyle="bold"
+                android:gravity="center"
                 android:layout_marginStart="24dp"
                 android:layout_marginBottom="24dp"
                 android:text="Button"
                 app:layout_constraintBottom_toTopOf="@+id/gk352"
                 app:layout_constraintStart_toStartOf="parent" />
-
-            <Button
-                android:id="@+id/cb352_2"
+            <TextView
+                android:id="@+id/cb352_1t"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cb352_1"
+                app:layout_constraintStart_toStartOf="@+id/cb352_1"
+                app:layout_constraintTop_toBottomOf="@+id/cb352_1">
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cb352_2"
+                android:textSize="10sp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:background="@drawable/round_btn"
+                android:textStyle="bold"
+                android:gravity="center"
                 android:text="Button"
                 app:layout_constraintBottom_toBottomOf="@+id/cb352_1"
                 app:layout_constraintEnd_toStartOf="@+id/cb352_3"
                 app:layout_constraintStart_toEndOf="@+id/cb352_1"
                 app:layout_constraintTop_toTopOf="@+id/cb352_1" />
-
-            <Button
-                android:id="@+id/cb352_3"
+            <TextView
+                android:id="@+id/cb352_2t"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cb352_2"
+                app:layout_constraintStart_toStartOf="@+id/cb352_2"
+                app:layout_constraintTop_toBottomOf="@+id/cb352_2">
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cb352_3"
+                android:textSize="10sp"
+                android:layout_width="50dp"
+                android:textColor="@color/black"
+                android:layout_height="50dp"
+                android:background="@drawable/round_btn"
+                android:textStyle="bold"
+                android:gravity="center"
                 android:layout_marginEnd="24dp"
                 android:text="Button"
                 app:layout_constraintBottom_toBottomOf="@+id/cb352_2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/cb352_2" />
-
-            <Button
-                android:id="@+id/dm352"
+            <TextView
+                android:id="@+id/cb352_3t"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cb352_3"
+                app:layout_constraintStart_toStartOf="@+id/cb352_3"
+                app:layout_constraintTop_toBottomOf="@+id/cb352_3">
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dm352"
+                android:textSize="10sp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:background="@drawable/round_btn"
+                android:textStyle="bold"
+                android:gravity="center"
                 android:layout_marginBottom="100dp"
                 android:text="Button"
                 app:layout_constraintBottom_toTopOf="@+id/cb352_2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
-
-            <Button
-                android:id="@+id/cm352_1"
+            <TextView
+                android:id="@+id/dm352t"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/dm352"
+                app:layout_constraintStart_toStartOf="@+id/dm352"
+                app:layout_constraintTop_toBottomOf="@+id/dm352">
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cm352_1"
+                android:textSize="10sp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:background="@drawable/round_btn"
+                android:textStyle="bold"
+                android:gravity="center"
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="30dp"
                 android:text="Button"
                 app:layout_constraintBottom_toTopOf="@+id/dm352"
                 app:layout_constraintEnd_toStartOf="@+id/cm352_2"
                 app:layout_constraintStart_toStartOf="parent" />
-
-            <Button
-                android:id="@+id/cm352_2"
+            <TextView
+                android:id="@+id/cm352_1t"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cm352_1"
+                app:layout_constraintStart_toStartOf="@+id/cm352_1"
+                app:layout_constraintTop_toBottomOf="@+id/cm352_1">
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cm352_2"
+                android:textSize="10sp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:layout_marginStart="50dp"
+                android:background="@drawable/round_btn"
+                android:gravity="center"
                 android:text="Button"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/cm352_1"
                 app:layout_constraintStart_toEndOf="@+id/cm352_1"
                 app:layout_constraintTop_toTopOf="@+id/cm352_1" />
-
-            <Button
-                android:id="@+id/cm352_3"
+            <TextView
+                android:id="@+id/cm352_2t"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cm352_2"
+                app:layout_constraintStart_toStartOf="@+id/cm352_2"
+                app:layout_constraintTop_toBottomOf="@+id/cm352_2">
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cm352_3"
+                android:textSize="10sp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="50dp"
+                android:textColor="@color/black"
+                android:background="@drawable/round_btn"
+                android:gravity="center"
                 android:text="Button"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/cm352_1"
                 app:layout_constraintEnd_toStartOf="@+id/cm352_4"
                 app:layout_constraintTop_toTopOf="@+id/cm352_1" />
-
-            <Button
-                android:id="@+id/cm352_4"
+            <TextView
+                android:id="@+id/cm352_3t"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cm352_3"
+                app:layout_constraintStart_toStartOf="@+id/cm352_3"
+                app:layout_constraintTop_toBottomOf="@+id/cm352_3">
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cm352_4"
+                android:textSize="10sp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/round_btn"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center"
                 android:layout_marginEnd="16dp"
                 android:text="Button"
                 app:layout_constraintBottom_toBottomOf="@+id/cm352_3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/cm352_3" />
-
-            <Button
-                android:id="@+id/f352_1"
+            <TextView
+                android:id="@+id/cm352_4t"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cm352_4"
+                app:layout_constraintStart_toStartOf="@+id/cm352_4"
+                app:layout_constraintTop_toBottomOf="@+id/cm352_4">
+            </TextView>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/f352_1"
+                android:textSize="10sp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:background="@drawable/round_btn"
+                android:textStyle="bold"
+                android:gravity="center"
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="101dp"
                 android:layout_marginBottom="190dp"
@@ -139,23 +289,51 @@
                 app:layout_constraintBottom_toTopOf="@+id/cm352_2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/f352_2"
+            <TextView
+                android:id="@+id/f352_1t"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/f352_1"
+                app:layout_constraintStart_toStartOf="@+id/f352_1"
+                app:layout_constraintTop_toBottomOf="@+id/f352_1">
+            </TextView>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/f352_2"
+                android:textSize="10sp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:background="@drawable/round_btn"
+                android:textStyle="bold"
+                android:gravity="center"
                 android:layout_marginEnd="90dp"
                 android:text="Button"
                 app:layout_constraintBottom_toBottomOf="@+id/f352_1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/f352_1" />
-
+            <TextView
+                android:id="@+id/f352_2t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/f352_2"
+                app:layout_constraintStart_toStartOf="@+id/f352_2"
+                app:layout_constraintTop_toBottomOf="@+id/f352_2">
+            </TextView>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/f433"
+            android:visibility="invisible"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView3"
@@ -165,12 +343,16 @@
             app:layout_constraintTop_toTopOf="@+id/imageView3"
             app:layout_constraintVertical_bias="1.0">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/gk433"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginBottom="24dp"
                 android:background="@drawable/round_btn"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginBottom="24dp"
                 android:text="Button"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -187,10 +369,14 @@
                 app:layout_constraintStart_toStartOf="@+id/gk433"
                 app:layout_constraintTop_toBottomOf="@+id/gk433" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb433_1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:gravity="center"
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="65dp"
                 android:background="@drawable/round_btn"
@@ -207,10 +393,14 @@
                 app:layout_constraintEnd_toEndOf="@+id/cb433_1"
                 app:layout_constraintStart_toStartOf="@+id/cb433_1"
                 app:layout_constraintTop_toBottomOf="@+id/cb433_1"/>
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb433_2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
                 android:layout_marginStart="50dp"
                 android:layout_marginBottom="50dp"
                 android:background="@drawable/round_btn"
@@ -228,10 +418,14 @@
                 app:layout_constraintStart_toStartOf="@+id/cb433_2"
                 app:layout_constraintTop_toBottomOf="@+id/cb433_2"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb433_3"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:gravity="center"
                 android:layout_marginEnd="50dp"
                 android:layout_marginBottom="50dp"
                 android:background="@drawable/round_btn"
@@ -249,10 +443,14 @@
                 app:layout_constraintStart_toStartOf="@+id/cb433_3"
                 app:layout_constraintTop_toBottomOf="@+id/cb433_3"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb433_4"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:gravity="center"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="65dp"
                 android:background="@drawable/round_btn"
@@ -270,10 +468,14 @@
                 app:layout_constraintEnd_toEndOf="@+id/cb433_4"
                 app:layout_constraintStart_toStartOf="@+id/cb433_4"
                 app:layout_constraintTop_toBottomOf="@+id/cb433_4"/>
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cm433_1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:gravity="center"
                 android:background="@drawable/round_btn"
                 android:layout_marginStart="50dp"
                 android:layout_marginBottom="150dp"
@@ -283,7 +485,7 @@
                 app:layout_constraintTop_toTopOf="@+id/cm433_3" />
             <TextView
                 android:id="@+id/cm433_1t"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="TextView"
                 android:textColor="@color/black"
@@ -291,11 +493,15 @@
                 app:layout_constraintEnd_toEndOf="@+id/cm433_1"
                 app:layout_constraintStart_toStartOf="@+id/cm433_1"
                 app:layout_constraintTop_toBottomOf="@+id/cm433_1"/>
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cm433_2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:textSize="10sp"
                 android:background="@drawable/round_btn"
+                android:textStyle="bold"
+                android:gravity="center"
                 android:layout_marginBottom="140dp"
                 android:text="Button"
                 app:layout_constraintBottom_toTopOf="@+id/cb433_2"
@@ -311,11 +517,15 @@
                 app:layout_constraintEnd_toEndOf="@+id/cm433_2"
                 app:layout_constraintStart_toStartOf="@+id/cm433_2"
                 app:layout_constraintTop_toBottomOf="@+id/cm433_2"/>
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cm433_3"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:textSize="10sp"
                 android:background="@drawable/round_btn"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center"
                 android:layout_marginEnd="50dp"
                 android:layout_marginBottom="150dp"
                 android:text="Button"
@@ -332,10 +542,14 @@
                 app:layout_constraintStart_toStartOf="@+id/cm433_3"
                 app:layout_constraintTop_toBottomOf="@+id/cm433_3">
             </TextView>
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/f433_1"
                 android:layout_width="50dp"
+                android:textColor="@color/black"
                 android:layout_height="50dp"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:gravity="center"
                 android:layout_marginStart="80dp"
                 android:background="@drawable/round_btn"
                 android:text="Button"
@@ -353,13 +567,17 @@
                 app:layout_constraintStart_toStartOf="@+id/f433_1"
                 app:layout_constraintTop_toBottomOf="@+id/f433_1">
             </TextView>
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/f433_2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="@drawable/round_btn"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:gravity="center"
                 android:layout_marginTop="24dp"
                 android:text="Button"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toStartOf="@+id/f433_3"
                 app:layout_constraintStart_toEndOf="@+id/f433_1"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -374,10 +592,14 @@
                 app:layout_constraintStart_toStartOf="@+id/f433_2"
                 app:layout_constraintTop_toBottomOf="@+id/f433_2">
             </TextView>
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/f433_3"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
                 android:layout_marginEnd="80dp"
                 android:layout_marginBottom="90dp"
                 android:background="@drawable/round_btn"
