@@ -31,7 +31,9 @@ class StatusFragment : Fragment(), onBackPressedListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         arguments?.let {
+
             code = it.getInt("code", 0)
+            Log.d("code",code.toString())
             viewModel.status(code)
             subscribeUI()
         }
@@ -82,15 +84,16 @@ class StatusFragment : Fragment(), onBackPressedListener {
             val getStatus1Fragment = GetStatus1Fragment()
             val getStatus2Fragment = GetStatus2Fragment()
             val getStatus3Fragment = GetStatus3Fragment()
-
+            val getStatus4Fragment = GetStatus4Fragment()
             getStatus1Fragment.arguments = bundle
             getStatus2Fragment.arguments = bundle
             getStatus3Fragment.arguments = bundle
+            getStatus4Fragment.arguments = bundle
 
             viewPager2Adapter.addFragment(getStatus1Fragment)
-
             viewPager2Adapter.addFragment(getStatus2Fragment)
             viewPager2Adapter.addFragment(getStatus3Fragment)
+            viewPager2Adapter.addFragment(getStatus4Fragment)
 
             viewPager2Adapter.notifyDataSetChanged()
             binding.vpViewpagerMain.adapter = viewPager2Adapter
