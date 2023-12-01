@@ -53,7 +53,7 @@ class GetStatus3Fragment : Fragment() {
 
             val data = it.getSerializable("data") as StatusResponse
             if (data.response.isNotEmpty() && data.response[0].lineups.isNotEmpty()) {
-                val lineup = data.response[0].lineups[0] // 첫 번째 lineup을 사용
+                val lineup = data.response[0].lineups[1] // 첫 번째 lineup을 사용
                 val formation = lineup.formation
                 val coach = lineup.coach.name
                 val team = lineup.team.name
@@ -69,6 +69,9 @@ class GetStatus3Fragment : Fragment() {
                     val num = i.player.number
                     val name = i.player.name
                     val postion = i.player.pos
+
+                    val postion2= i.player.grid
+                    Log.d("chflkd2", postion2)
                     adapter.addItem(
                         lineupitem(num, name, postion)
                     )
