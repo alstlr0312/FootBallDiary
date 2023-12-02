@@ -64,6 +64,7 @@ class GetStatus2Fragment : Fragment() {
                     adapter.addItem(
                         lineupitem(num, name, postion)
                     )
+                    Log.d("chflkd2", i.player.grid)
                 }
                 for (i in lineup.substitutes) {
                     val num = i.player.number
