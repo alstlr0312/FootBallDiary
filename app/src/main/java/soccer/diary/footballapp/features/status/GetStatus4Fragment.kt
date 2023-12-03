@@ -173,6 +173,43 @@ class GetStatus4Fragment : Fragment() {
                     binding.m4514.text = (cm5?.player?.number ?: 0).toString()
                     binding.f4511.text = (f1?.player?.number ?: 0).toString()
                 }
+                else if (formation == "4-4-1-1") {
+                    binding.f451.visibility=View.VISIBLE
+                    val gp = lineup.startXI.find { it.player.pos == "G" && it.player.grid == "1:1" }
+                    val cb1 = lineup.startXI.find { it.player.pos == "D" && it.player.grid == "2:4" }
+                    val cb2 = lineup.startXI.find { it.player.pos == "D" && it.player.grid == "2:3" }
+                    val cb3 = lineup.startXI.find { it.player.pos == "D" && it.player.grid == "2:2" }
+                    val cb4 = lineup.startXI.find { it.player.pos == "D" && it.player.grid == "2:1" }
+                    val cm1 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:4" }
+                    val cm2 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:3" }
+                    val cm3 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:2" }
+                    val cm4 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:1" }
+                    val cm5 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "4:1" }
+                    val f1 = lineup.startXI.find { it.player.pos == "F" && it.player.grid == "5:1" }
+                    binding.gk4411t.text = formatPlayerName(gp?.player?.name)?: "G"
+                    binding.cb44111t.text = formatPlayerName(cb1?.player?.name)?: "D"
+                    binding.cb44112t.text = formatPlayerName(cb2?.player?.name)?: "D"
+                    binding.cb44113t.text = formatPlayerName(cb3?.player?.name)?: "D"
+                    binding.cb44114t.text = formatPlayerName(cb4?.player?.name)?: "D"
+                    binding.cm44111t.text = formatPlayerName(cm1?.player?.name)?: "M"
+                    binding.m44111t.text = formatPlayerName(cm2?.player?.name) ?: "M"
+                    binding.m44112t.text = formatPlayerName(cm3?.player?.name) ?: "M"
+                    binding.m44113t.text = formatPlayerName(cm4?.player?.name) ?: "M"
+                    binding.m44114t.text = formatPlayerName(cm5?.player?.name) ?: "M"
+                    binding.f44111t.text = formatPlayerName(f1?.player?.name) ?: "ST"
+
+                    binding.gk4411.text = (gp?.player?.number ?: 0).toString()
+                    binding.cb44111.text = (cb1?.player?.number ?: 0).toString()
+                    binding.cb44112.text = (cb2?.player?.number ?: 0).toString()
+                    binding.cb44113.text = (cb3?.player?.number ?: 0).toString()
+                    binding.cb44114.text = (cb4?.player?.number ?: 0).toString()
+                    binding.cm44111.text = (cm1?.player?.number ?: 0).toString()
+                    binding.m44111.text = (cm2?.player?.number ?: 0).toString()
+                    binding.m44112.text = (cm3?.player?.number ?: 0).toString()
+                    binding.m44113.text = (cm4?.player?.number ?: 0).toString()
+                    binding.m44114.text = (cm5?.player?.number ?: 0).toString()
+                    binding.f44111.text = (f1?.player?.number ?: 0).toString()
+                }
             }
         }
     }
