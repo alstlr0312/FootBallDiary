@@ -174,7 +174,7 @@ class GetStatus4Fragment : Fragment() {
                     binding.f4511.text = (f1?.player?.number ?: 0).toString()
                 }
                 else if (formation == "4-4-1-1") {
-                    binding.f451.visibility=View.VISIBLE
+                    binding.f4411.visibility=View.VISIBLE
                     val gp = lineup.startXI.find { it.player.pos == "G" && it.player.grid == "1:1" }
                     val cb1 = lineup.startXI.find { it.player.pos == "D" && it.player.grid == "2:4" }
                     val cb2 = lineup.startXI.find { it.player.pos == "D" && it.player.grid == "2:3" }
