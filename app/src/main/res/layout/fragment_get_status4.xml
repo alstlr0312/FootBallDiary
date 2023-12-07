@@ -329,6 +329,7 @@
             </TextView>
 
 
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -1214,7 +1215,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/f4411"
-            android:visibility="visible"
+            android:visibility="invisible"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView3"
@@ -1506,6 +1507,297 @@
                 app:layout_constraintEnd_toEndOf="@+id/f4411_1"
                 app:layout_constraintStart_toStartOf="@+id/f4411_1"
                 app:layout_constraintTop_toBottomOf="@+id/f4411_1">
+            </TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/f343"
+            android:visibility="invisible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView3"
+            app:layout_constraintVertical_bias="1.0">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/gk343"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/round_btn2"
+                android:gravity="center"
+                android:text="Button"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/gk343t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/gk343"
+                app:layout_constraintStart_toStartOf="@+id/gk343"
+                app:layout_constraintTop_toBottomOf="@+id/gk343" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cb343_1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginBottom="100dp"
+                android:background="@drawable/round_btn2"
+                android:gravity="center"
+                android:text="Button"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/gk343"
+                app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/cb343_1t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cb343_1"
+                app:layout_constraintStart_toStartOf="@+id/cb343_1"
+                app:layout_constraintTop_toBottomOf="@+id/cb343_1"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cb343_2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/round_btn2"
+                android:gravity="center"
+                android:text="Button"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/gk343"
+                app:layout_constraintEnd_toStartOf="@+id/cb343_3"
+                app:layout_constraintStart_toEndOf="@+id/cb343_1" />
+            <TextView
+                android:id="@+id/cb343_2t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cb343_2"
+                app:layout_constraintStart_toStartOf="@+id/cb343_2"
+                app:layout_constraintTop_toBottomOf="@+id/cb343_2"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cb343_3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/round_btn2"
+                android:gravity="center"
+                android:text="Button"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toTopOf="@+id/cb343_1t"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/cb343_3t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cb343_3"
+                app:layout_constraintStart_toStartOf="@+id/cb343_3"
+                app:layout_constraintTop_toBottomOf="@+id/cb343_3"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/m343_1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="120dp"
+                android:background="@drawable/round_btn2"
+                android:gravity="center"
+                android:text="Button"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/cb343_1"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/m343_1t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/m343_1"
+                app:layout_constraintStart_toStartOf="@+id/m343_1"
+                app:layout_constraintTop_toBottomOf="@+id/m343_1"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/m343_2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/round_btn2"
+                android:gravity="center"
+                android:text="Button"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/cb343_1"
+                app:layout_constraintStart_toEndOf="@+id/m343_1"
+                app:layout_constraintTop_toTopOf="@+id/m343_1" />
+
+            <TextView
+                android:id="@+id/m343_2t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/m343_2"
+                app:layout_constraintStart_toStartOf="@+id/m343_2"
+                app:layout_constraintTop_toBottomOf="@+id/m343_2" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/m343_3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/round_btn2"
+                android:gravity="center"
+                android:text="Button"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/cb343_3"
+                app:layout_constraintEnd_toStartOf="@+id/m343_4"
+                app:layout_constraintTop_toTopOf="@+id/m343_4" />
+            <TextView
+                android:id="@+id/m343_3t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/m343_3"
+                app:layout_constraintStart_toStartOf="@+id/m343_3"
+                app:layout_constraintTop_toBottomOf="@+id/m343_3">
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/m343_4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="120dp"
+                android:background="@drawable/round_btn2"
+                android:gravity="center"
+                android:text="Button"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/cb343_3"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/m343_4t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/m343_4"
+                app:layout_constraintStart_toStartOf="@+id/m343_4"
+                app:layout_constraintTop_toBottomOf="@+id/m343_4">
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/f343_1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="50dp"
+                android:background="@drawable/round_btn2"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/m343_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/f343_1t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/f343_1"
+                app:layout_constraintStart_toStartOf="@+id/f343_1"
+                app:layout_constraintTop_toBottomOf="@+id/f343_1">
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/f343_2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/round_btn2"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/f343_1"
+                app:layout_constraintEnd_toStartOf="@+id/f343_3"
+                app:layout_constraintStart_toEndOf="@+id/f343_1"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/f343_2t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/f343_2"
+                app:layout_constraintStart_toStartOf="@+id/f343_2"
+                app:layout_constraintTop_toBottomOf="@+id/f343_2">
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/f343_3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/round_btn2"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/m343_3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/f343_3t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/f343_3"
+                app:layout_constraintStart_toStartOf="@+id/f343_3"
+                app:layout_constraintTop_toBottomOf="@+id/f343_3">
             </TextView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
