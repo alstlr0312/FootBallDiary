@@ -7,19 +7,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
-import soccer.diary.footballapp.databinding.FragmentGetStatus4Binding
+import soccer.diary.footballapp.databinding.FragmentGetStatus5Binding
 import soccer.diary.footballapp.model.StatusResponse
 
 
-class GetStatus4Fragment : Fragment() {
-    private lateinit var binding: FragmentGetStatus4Binding
+class GetStatus5Fragment : Fragment() {
+    private lateinit var binding: FragmentGetStatus5Binding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentGetStatus4Binding.inflate(inflater, container, false)
+        binding = FragmentGetStatus5Binding.inflate(inflater, container, false)
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -28,9 +28,9 @@ class GetStatus4Fragment : Fragment() {
             val data = it.getSerializable("data") as StatusResponse
 
             if (data.response.isNotEmpty() && data.response[0].lineups.isNotEmpty()) {
-                val flag = data.response[0].teams.home.logo
+                val flag = data.response[0].teams.away.logo
                 Glide.with(requireContext()).load(Uri.parse(flag)).into(binding.teamlogo)
-                val lineup = data.response[0].lineups[0]
+                val lineup = data.response[0].lineups[1]
                 val formation = lineup.formation
                 if (formation == "4-3-3") {
                     binding.f433.visibility=View.VISIBLE

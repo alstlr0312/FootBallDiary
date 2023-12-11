@@ -83,18 +83,19 @@ class StatusFragment : Fragment(), onBackPressedListener {
             bundle.putSerializable("data", data)
             val getStatus1Fragment = GetStatus1Fragment()
             val getStatus2Fragment = GetStatus2Fragment()
-            val getStatus3Fragment = GetStatus3Fragment()
             val getStatus4Fragment = GetStatus4Fragment()
+            val getStatus3Fragment = GetStatus3Fragment()
+            val getStatus5Fragment = GetStatus5Fragment()
             getStatus1Fragment.arguments = bundle
             getStatus2Fragment.arguments = bundle
-            getStatus3Fragment.arguments = bundle
             getStatus4Fragment.arguments = bundle
-
+            getStatus3Fragment.arguments = bundle
+            getStatus5Fragment.arguments = bundle
             viewPager2Adapter.addFragment(getStatus1Fragment)
             viewPager2Adapter.addFragment(getStatus2Fragment)
-            viewPager2Adapter.addFragment(getStatus3Fragment)
             viewPager2Adapter.addFragment(getStatus4Fragment)
-
+            viewPager2Adapter.addFragment(getStatus3Fragment)
+            viewPager2Adapter.addFragment(getStatus5Fragment)
             viewPager2Adapter.notifyDataSetChanged()
             binding.vpViewpagerMain.adapter = viewPager2Adapter
 
