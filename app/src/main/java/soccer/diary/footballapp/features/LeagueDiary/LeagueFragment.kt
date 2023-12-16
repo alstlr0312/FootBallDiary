@@ -15,9 +15,6 @@ import soccer.diary.footballapp.databinding.FragmentLeagueBinding
 import soccer.diary.footballapp.features.Ranking.RankingFragment
 import soccer.diary.footballapp.features.home.NationalAdapter
 import soccer.diary.footballapp.features.home.VerticalItemDecorator
-import soccer.diary.footballapp.features.status.StatusFragment
-import soccer.diary.footballapp.model.FixturesResponse
-import soccer.diary.footballapp.model.ResponseObserver
 import soccer.diary.footballapp.model.gameItem
 import soccer.diary.footballapp.model.onBackPressedListener
 import java.text.SimpleDateFormat
@@ -64,15 +61,6 @@ class LeagueFragment : Fragment(), onBackPressedListener {
         NrecyclerView.addItemDecoration(VerticalItemDecorator(20))
         viewModel.getFixtures(code, year, previousDateString, nextDateString)
         subscribeUI()
-        binding.rankBtn.setOnClickListener {
-            val rankingFragment = RankingFragment()
-            Bundle().putInt("code", code)
-            rankingFragment.arguments = Bundle()
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, rankingFragment)
-                .addToBackStack(null)
-                .commit()
-        }
     }
     fun setbackground(code: Int) {
         val background = binding.leagueBack
@@ -107,6 +95,17 @@ class LeagueFragment : Fragment(), onBackPressedListener {
                 logo.setImageResource(R.drawable.pl_logo2)
             }
         }
+        binding.rankBtn.setOnClickListener {
+            val rankingFragment = RankingFragment()
+            val bundle = Bundle()
+            bundle.putInt("code", code)
+            rankingFragment.arguments = bundle
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, rankingFragment)
+                .addToBackStack(null)
+                .commit()
+        }
+
     }
 
 

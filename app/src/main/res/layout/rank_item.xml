@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical" >
+
+    <TextView
+        android:id="@+id/ranking_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/rankimg"
+        android:layout_width="41dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/ranking_txt"
+        app:layout_constraintStart_toEndOf="@+id/ranking_txt"
+        app:layout_constraintTop_toTopOf="@+id/ranking_txt"
+        app:srcCompat="@drawable/flag" />
+
+    <TextView
+        android:id="@+id/rankteamname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/rankimg"
+        app:layout_constraintStart_toEndOf="@+id/rankimg"
+        app:layout_constraintTop_toTopOf="@+id/rankimg" />
+
+    <TextView
+        android:id="@+id/rankgame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:text="10"
+        app:layout_constraintBottom_toBottomOf="@+id/rankteamname"
+        app:layout_constraintEnd_toStartOf="@+id/rankwin"
+        app:layout_constraintTop_toTopOf="@+id/rankteamname" />
+
+    <TextView
+        android:id="@+id/rankwin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:text="8"
+        app:layout_constraintBottom_toBottomOf="@+id/rankgame"
+        app:layout_constraintEnd_toStartOf="@+id/rankdraw"
+        app:layout_constraintTop_toTopOf="@+id/rankgame" />
+
+    <TextView
+        android:id="@+id/rankdraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@+id/rankwin"
+        app:layout_constraintEnd_toStartOf="@+id/ranklose"
+        app:layout_constraintTop_toTopOf="@+id/rankwin" />
+
+    <TextView
+        android:id="@+id/ranklose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@+id/rankdraw"
+        app:layout_constraintEnd_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/rankdraw"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:text="50"
+        app:layout_constraintBottom_toBottomOf="@+id/ranklose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ranklose" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -38,6 +38,21 @@ data class StatusResponse(
     val results: Int
 ) : Serializable
 
+data class RankingResponse(
+    @SerializedName("errors")
+    val errors: List<Any>,
+    @SerializedName("get")
+    val `get`: String,
+    @SerializedName("paging")
+    val paging: Paging,
+    @SerializedName("parameters")
+    val parameters: Parameters,
+    @SerializedName("response")
+    val response: List<Response>,
+    @SerializedName("results")
+    val results: Int
+) : Serializable
+
 data class lineResponse(
     @SerializedName("events")
     val events: List<Event>,
@@ -58,41 +73,17 @@ data class lineResponse(
     @SerializedName("teams")
     val teams: Teams
 ): Serializable
-data class linedata(
-    @SerializedName("homeimg")
-    val homeimg: String,
-    @SerializedName("homescore")
-    val homescore: Int,
-    @SerializedName("hometeam")
-    val hometeam: String,
-    @SerializedName("awayimg")
-    val awayimg: String,
-    @SerializedName("awayscore")
-    val awayscore: Int,
-    @SerializedName("awayteam")
-    val awayteam: String,
-    @SerializedName("startime")
-    val startime: String,
-    @SerializedName("id")
-    val id: Int,
-    @SerializedName("events")
-    val events: List<Event>,
-    @SerializedName("fixture")
-    val fixture: Fixture,
+data class All(
+    @SerializedName("draw")
+    val draw: Int,
     @SerializedName("goals")
     val goals: Goals,
-    @SerializedName("league")
-    val league: League,
-    @SerializedName("lineups")
-    val lineups: List<Lineup>,
-    @SerializedName("players")
-    val players: List<PlayerXXX>,
-    @SerializedName("score")
-    val score: Score,
-    @SerializedName("statistics")
-    val statistics: List<StatisticX>,
-    @SerializedName("teams")
-    val teams: Teams
+    @SerializedName("lose")
+    val lose: Int,
+    @SerializedName("played")
+    val played: Int,
+    @SerializedName("win")
+    val win: Int
 ): Serializable
 data class FixturesResponse(
     @SerializedName("errors")
@@ -109,7 +100,43 @@ data class FixturesResponse(
     val results: Int
 ): Serializable
 
+data class Standing(
+    @SerializedName("all")
+    val all: All,
+    @SerializedName("away")
+    val away: Away,
+    @SerializedName("description")
+    val description: String,
+    @SerializedName("form")
+    val form: String,
+    @SerializedName("goalsDiff")
+    val goalsDiff: Int,
+    @SerializedName("group")
+    val group: String,
+    @SerializedName("home")
+    val home: Home,
+    @SerializedName("points")
+    val points: Int,
+    @SerializedName("rank")
+    val rank: Int,
+    @SerializedName("status")
+    val status: String,
+    @SerializedName("team")
+    val team: Team,
+    @SerializedName("update")
+    val update: String
+): Serializable
 data class Away(
+    @SerializedName("draw")
+    val draw: Int,
+    @SerializedName("goals")
+    val goals: Goals,
+    @SerializedName("lose")
+    val lose: Int,
+    @SerializedName("played")
+    val played: Int,
+    @SerializedName("win")
+    val win: Int,
     @SerializedName("id")
     val id: Int,
     @SerializedName("logo")
@@ -119,6 +146,7 @@ data class Away(
     @SerializedName("winner")
     val winner: Boolean
 ): Serializable
+
 data class Extratime(
     @SerializedName("away")
     val away: Any,
@@ -162,6 +190,16 @@ data class Halftime(
     val home: Int
 ): Serializable
 data class Home(
+    @SerializedName("draw")
+    val draw: Int,
+    @SerializedName("goals")
+    val goals: Goals,
+    @SerializedName("lose")
+    val lose: Int,
+    @SerializedName("played")
+    val played: Int,
+    @SerializedName("win")
+    val win: Int,
     @SerializedName("id")
     val id: Int,
     @SerializedName("logo")
@@ -185,7 +223,9 @@ data class League(
     @SerializedName("round")
     val round: String,
     @SerializedName("season")
-    val season: Int
+    val season: Int,
+    @SerializedName("standings")
+    val standings: List<List<Standing>>
 ): Serializable
 data class Paging(
     @SerializedName("current")
