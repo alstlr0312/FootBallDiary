@@ -97,13 +97,10 @@ class LeagueFragment : Fragment(), onBackPressedListener {
         }
         binding.rankBtn.setOnClickListener {
             val rankingFragment = RankingFragment()
-            val bundle = Bundle()
-            bundle.putInt("code", code)
-            rankingFragment.arguments = bundle
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, rankingFragment)
-                .addToBackStack(null)
-                .commit()
+            val args = Bundle()
+            args.putInt("code", code)
+            rankingFragment.arguments = args
+            rankingFragment.show(requireActivity().supportFragmentManager, "ranking_dialog")
         }
 
     }
