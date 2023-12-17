@@ -43,5 +43,18 @@
         app:layout_constraintStart_toEndOf="@+id/player_num"
         app:layout_constraintTop_toTopOf="@+id/player_num" />
 
+    <TextView
+        android:id="@+id/sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="12sp"
+        android:text="김 덕 배"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/player_position"
+        app:layout_constraintStart_toEndOf="@+id/player_position"
+        app:layout_constraintTop_toTopOf="@+id/player_position" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

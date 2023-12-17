@@ -10,11 +10,17 @@ class statusbaritem (
     @SerializedName("awayscore")
     val awayscore: Any,
 )
-class lineupitem (
+class lineupitem(
     @SerializedName("num")
     val num: Int,
     @SerializedName("name")
     val name: String,
     @SerializedName("postion")
     val postion: String,
+    @SerializedName("face")
+    val face: String,
+    @SerializedName("sub")
+    val sub: Boolean,
+    @SerializedName("statistics")
+    val statistics: List<Statistic>
 )

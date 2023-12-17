@@ -55,27 +55,20 @@ class GetStatus2Fragment : Fragment() {
                 binding.coachName.text = coach
 
                 val flag = data.response[0].teams.home.logo
+
+                val player = data.response[0].players[0].players
                 Glide.with(requireContext()).load(Uri.parse(flag)).into(binding.homeFlag)
-
-                for (i in lineup.startXI) {
-                    val num = i.player.number
+                for (i in player) {
+                    val num = i.statistics[0].games.number
                     val name = i.player.name
-                    val postion = i.player.pos
+                    val postion = i.statistics[0].games.position
+                    val face = i.player.photo
+                    val sub = i.statistics[0].games.substitute
+                    val statics = i.statistics
                     adapter.addItem(
-                        lineupitem(num, name, postion)
-                    )
-                    Log.d("chflkd2", i.player.grid)
-                }
-                for (i in lineup.substitutes) {
-                    val num = i.player.number
-                    val name = i.player.name
-                    val postion = i.player.pos
-                    subadapter.addItem(
-                        lineupitem(num, name, postion)
+                        lineupitem(num, name, postion,face,sub,statics)
                     )
                 }
-            }else{
-
             }
         }
     }

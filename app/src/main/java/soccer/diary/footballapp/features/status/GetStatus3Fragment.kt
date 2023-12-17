@@ -1,11 +1,7 @@
 package soccer.diary.footballapp.features.status
 
-import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
-import android.text.SpannableString
-import android.text.Spanned
-import android.text.style.BackgroundColorSpan
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,8 +11,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import soccer.diary.footballapp.R
-import soccer.diary.footballapp.databinding.FragmentGetStatus1Binding
 import soccer.diary.footballapp.databinding.FragmentGetStatus3Binding
 import soccer.diary.footballapp.model.StatusResponse
 import soccer.diary.footballapp.model.lineupitem
@@ -56,32 +50,22 @@ class GetStatus3Fragment : Fragment() {
                 val lineup = data.response[0].lineups[1] // 첫 번째 lineup을 사용
                 val formation = lineup.formation
                 val coach = lineup.coach.name
-                val team = lineup.team.name
                 Log.d("chflkd", formation)
                 Log.d("chflkd2", coach)
                 binding.formation.text = formation
                 binding.coachName.text = coach
-
                 val flag = data.response[0].teams.away.logo
                 Glide.with(requireContext()).load(Uri.parse(flag)).into(binding.awayFlag)
-
-                for (i in lineup.startXI) {
-                    val num = i.player.number
+                val player = data.response[0].players[1].players
+                for (i in player) {
+                    val num = i.statistics[0].games.number
                     val name = i.player.name
-                    val postion = i.player.pos
-
-                    val postion2= i.player.grid
-                    Log.d("chflkd2", postion2)
+                    val postion = i.statistics[0].games.position
+                    val face = i.player.photo
+                    val sub = i.statistics[0].games.substitute
+                    val statics = i.statistics
                     adapter.addItem(
-                        lineupitem(num, name, postion)
-                    )
-                }
-                for (i in lineup.substitutes) {
-                    val num = i.player.number
-                    val name = i.player.name
-                    val postion = i.player.pos
-                    subadapter.addItem(
-                        lineupitem(num, name, postion)
+                        lineupitem(num, name, postion,face,sub,statics)
                     )
                 }
             }

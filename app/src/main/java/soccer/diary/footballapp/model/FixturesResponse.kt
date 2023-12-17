@@ -1,6 +1,8 @@
 package soccer.diary.footballapp.model
 
 
+import android.os.Parcel
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
@@ -29,7 +31,7 @@ data class StatusResponse(
     @SerializedName("get")
     val `get`: String,
     @SerializedName("paging")
-    val paging: Paging,  // 이 부분은 이미 Serializable이므로 변경이 필요 없음
+    val paging: Paging,
     @SerializedName("parameters")
     val parameters: Parameters,
     @SerializedName("response")
@@ -65,7 +67,7 @@ data class lineResponse(
     @SerializedName("lineups")
     val lineups: List<Lineup>,
     @SerializedName("players")
-    val players: List<PlayerXXX>,
+    val players: List<PlayerXXXX>,
     @SerializedName("score")
     val score: Score,
     @SerializedName("statistics")
@@ -483,6 +485,7 @@ data class StartXI(
     @SerializedName("player")
     val player: PlayerX
 ): Serializable
+
 data class Statistic(
     @SerializedName("cards")
     val cards: Cards,
@@ -506,7 +509,41 @@ data class Statistic(
     val shots: Shots,
     @SerializedName("tackles")
     val tackles: Tackles
-): Serializable
+): Serializable, Parcelable {
+    constructor(parcel: Parcel) : this(
+        TODO("cards"),
+        TODO("dribbles"),
+        TODO("duels"),
+        TODO("fouls"),
+        TODO("games"),
+        TODO("goals"),
+        parcel.readInt(),
+        TODO("passes"),
+        TODO("penalty"),
+        TODO("shots"),
+        TODO("tackles")
+    ) {
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeInt(offsides)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<Statistic> {
+        override fun createFromParcel(parcel: Parcel): Statistic {
+            return Statistic(parcel)
+        }
+
+        override fun newArray(size: Int): Array<Statistic?> {
+            return arrayOfNulls(size)
+        }
+    }
+}
+
 data class StatisticX(
     @SerializedName("statistics")
     val statistics: List<StatisticXX>,
