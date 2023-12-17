@@ -33,25 +33,12 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/league_rv"
         android:layout_width="0dp"
-        android:layout_height="160dp"
+        android:layout_height="190dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seach_bar" />
-
-    <EditText
-        android:id="@+id/seach_bar"
-        android:layout_width="241dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/shape_round"
-        android:ems="10"
-        android:hint="  search for Leagues.."
-        android:inputType="textPersonName"
-        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
 
     <TextView
         android:id="@+id/textView"

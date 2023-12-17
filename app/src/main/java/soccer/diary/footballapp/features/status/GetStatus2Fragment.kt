@@ -48,9 +48,6 @@ class GetStatus2Fragment : Fragment() {
                 val lineup = data.response[0].lineups[0]
                 val formation = lineup.formation
                 val coach = lineup.coach.name
-                val team = lineup.team.name
-                Log.d("chflkd", formation)
-                Log.d("chflkd2", coach)
                 binding.formation.text = formation
                 binding.coachName.text = coach
 

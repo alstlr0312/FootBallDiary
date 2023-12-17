@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
-    android:layout_width="125dp"
-    android:layout_height="150dp"
+    android:layout_width="160dp"
+    android:layout_height="190dp"
     android:gravity="center_vertical"
     android:background="@drawable/shadow_view">
 
