@@ -9,9 +9,10 @@
 
     <TextView
         android:id="@+id/ranking_txt"
-        android:layout_width="wrap_content"
+        android:layout_width="20dp"
         android:layout_height="wrap_content"
-        android:text="1"
+        android:layout_marginStart="8dp"
+        android:text="12"
         android:textColor="@color/black"
         android:textSize="15dp"
         android:textStyle="bold"
@@ -24,7 +25,6 @@
         android:id="@+id/rankimg"
         android:layout_width="41dp"
         android:layout_height="26dp"
-        android:layout_marginStart="8dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@+id/ranking_txt"
         app:layout_constraintStart_toEndOf="@+id/ranking_txt"
@@ -33,78 +33,92 @@
 
     <TextView
         android:id="@+id/rankteamname"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="ManchesterUnited"
         android:textColor="@color/black"
-        android:textSize="15dp"
+        android:textSize="13dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/rankimg"
         app:layout_constraintStart_toEndOf="@+id/rankimg"
         app:layout_constraintTop_toTopOf="@+id/rankimg" />
 
-    <TextView
-        android:id="@+id/rankgame"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        android:text="10"
         app:layout_constraintBottom_toBottomOf="@+id/rankteamname"
-        app:layout_constraintEnd_toStartOf="@+id/rankwin"
-        app:layout_constraintTop_toTopOf="@+id/rankteamname" />
-
-    <TextView
-        android:id="@+id/rankwin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        android:text="8"
-        app:layout_constraintBottom_toBottomOf="@+id/rankgame"
-        app:layout_constraintEnd_toStartOf="@+id/rankdraw"
-        app:layout_constraintTop_toTopOf="@+id/rankgame" />
-
-    <TextView
-        android:id="@+id/rankdraw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        android:text="1"
-        app:layout_constraintBottom_toBottomOf="@+id/rankwin"
-        app:layout_constraintEnd_toStartOf="@+id/ranklose"
-        app:layout_constraintTop_toTopOf="@+id/rankwin" />
-
-    <TextView
-        android:id="@+id/ranklose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        android:text="1"
-        app:layout_constraintBottom_toBottomOf="@+id/rankdraw"
-        app:layout_constraintEnd_toStartOf="@+id/textView13"
-        app:layout_constraintTop_toTopOf="@+id/rankdraw"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        android:text="50"
-        app:layout_constraintBottom_toBottomOf="@+id/ranklose"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ranklose" />
+        app:layout_constraintTop_toTopOf="@+id/rankteamname">
+
+        <TextView
+            android:id="@+id/rankgame"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="10"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/rankwin"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rankwin"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="8"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/rankgame"
+            app:layout_constraintEnd_toStartOf="@+id/rankdraw"
+            app:layout_constraintTop_toTopOf="@+id/rankgame" />
+
+        <TextView
+            android:id="@+id/rankdraw"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="1"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/rankwin"
+            app:layout_constraintEnd_toStartOf="@+id/ranklose"
+            app:layout_constraintTop_toTopOf="@+id/rankwin" />
+
+        <TextView
+            android:id="@+id/ranklose"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="1"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/rankdraw"
+            app:layout_constraintEnd_toStartOf="@+id/textView13"
+            app:layout_constraintTop_toTopOf="@+id/rankdraw"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:text="50"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ranklose"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ranklose" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
