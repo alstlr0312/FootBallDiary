@@ -49,26 +49,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/gk352"
-                android:textSize="15sp
-"
-                android:layout_width="50dp"
-                android:textColor="@color/black"
-                android:layout_height="50dp"
-                android:background="@drawable/playerimg"
+                style="@style/playerbtn"
                 android:layout_marginBottom="16dp"
-                android:text="Button"
-                android:textStyle="bold"
-                android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/gk352t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/gk352"
                 app:layout_constraintStart_toStartOf="@+id/gk352"
                 app:layout_constraintTop_toBottomOf="@+id/gk352">
@@ -76,25 +64,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb352_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="24dp"
                 android:layout_marginBottom="40dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/cb352_2t"
                 app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/cb352_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb352_1"
                 app:layout_constraintStart_toStartOf="@+id/cb352_1"
                 app:layout_constraintTop_toBottomOf="@+id/cb352_1">
@@ -102,25 +79,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb352_2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginBottom="30dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/gk352"
                 app:layout_constraintEnd_toStartOf="@+id/cb352_3"
                 app:layout_constraintStart_toEndOf="@+id/cb352_1" />
             <TextView
                 android:id="@+id/cb352_2t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb352_2"
                 app:layout_constraintStart_toStartOf="@+id/cb352_2"
                 app:layout_constraintTop_toBottomOf="@+id/cb352_2">
@@ -128,25 +94,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb352_3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginEnd="24dp"
                 android:layout_marginBottom="40dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/cb352_2"
                 app:layout_constraintEnd_toEndOf="parent" />
             <TextView
                 android:id="@+id/cb352_3t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb352_3"
                 app:layout_constraintStart_toStartOf="@+id/cb352_3"
                 app:layout_constraintTop_toBottomOf="@+id/cb352_3">
@@ -154,25 +109,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/dm352"
-                android:textSize="15sp"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:textColor="@color/black"
-                android:background="@drawable/playerimg"
-                android:textStyle="bold"
-                android:gravity="center"
+                style="@style/playerbtn"
                 android:layout_marginBottom="80dp"
-                android:text="Button"
                 app:layout_constraintBottom_toTopOf="@+id/cb352_2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/dm352t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/dm352"
                 app:layout_constraintStart_toStartOf="@+id/dm352"
                 app:layout_constraintTop_toBottomOf="@+id/dm352">
@@ -180,26 +124,15 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cm352_1"
-                android:textSize="15sp"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:textColor="@color/black"
-                android:background="@drawable/playerimg"
-                android:textStyle="bold"
-                android:gravity="center"
+                style="@style/playerbtn"
                 android:layout_marginStart="24dp"
                 android:layout_marginBottom="30dp"
-                android:text="Button"
                 app:layout_constraintBottom_toTopOf="@+id/dm352"
                 app:layout_constraintEnd_toStartOf="@+id/cm352_2"
                 app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/cm352_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cm352_1"
                 app:layout_constraintStart_toStartOf="@+id/cm352_1"
                 app:layout_constraintTop_toBottomOf="@+id/cm352_1">
@@ -207,25 +140,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cm352_2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="50dp"
                 android:layout_marginBottom="-30dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/cm352_1"
                 app:layout_constraintStart_toEndOf="@+id/cm352_1" />
             <TextView
                 android:id="@+id/cm352_2t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cm352_2"
                 app:layout_constraintStart_toStartOf="@+id/cm352_2"
                 app:layout_constraintTop_toBottomOf="@+id/cm352_2">
@@ -233,25 +155,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cm352_3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginEnd="50dp"
                 android:layout_marginBottom="-30dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/cm352_1"
                 app:layout_constraintEnd_toStartOf="@+id/cm352_4" />
             <TextView
                 android:id="@+id/cm352_3t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cm352_3"
                 app:layout_constraintStart_toStartOf="@+id/cm352_3"
                 app:layout_constraintTop_toBottomOf="@+id/cm352_3">
@@ -259,24 +170,13 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cm352_4"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/cm352_1" />
             <TextView
                 android:id="@+id/cm352_4t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cm352_4"
                 app:layout_constraintStart_toStartOf="@+id/cm352_4"
                 app:layout_constraintTop_toBottomOf="@+id/cm352_4">
@@ -285,25 +185,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/f352_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="90dp"
                 android:layout_marginBottom="150dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/cm352_2"
                 app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/f352_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/f352_1"
                 app:layout_constraintStart_toStartOf="@+id/f352_1"
                 app:layout_constraintTop_toBottomOf="@+id/f352_1">
@@ -312,25 +201,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/f352_2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginEnd="90dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/f352_1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/f352_1" />
             <TextView
                 android:id="@+id/f352_2t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/f352_2"
                 app:layout_constraintStart_toStartOf="@+id/f352_2"
                 app:layout_constraintTop_toBottomOf="@+id/f352_2">
@@ -354,201 +232,113 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/gk433"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/playerimg"
-                android:textStyle="bold"
-                android:textSize="15sp"
-                android:textColor="@color/black"
-                android:gravity="center"
+                style="@style/playerbtn"
                 android:layout_marginBottom="24dp"
-                android:text="Button"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/gk433t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/gk433"
                 app:layout_constraintStart_toStartOf="@+id/gk433"
                 app:layout_constraintTop_toBottomOf="@+id/gk433" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb433_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:textStyle="bold"
-                android:textSize="15sp"
-                android:textColor="@color/black"
-                android:gravity="center"
+                style="@style/playerbtn"
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="65dp"
-                android:background="@drawable/playerimg"
-                android:text="Button"
                 app:layout_constraintBottom_toTopOf="@+id/gk433"
                 app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/cb433_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb433_1"
                 app:layout_constraintStart_toStartOf="@+id/cb433_1"
                 app:layout_constraintTop_toBottomOf="@+id/cb433_1"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb433_2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:textSize="15sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:gravity="center"
+                style="@style/playerbtn"
                 android:layout_marginStart="50dp"
                 android:layout_marginBottom="50dp"
-                android:background="@drawable/playerimg"
-                android:text="Button"
                 app:layout_constraintBottom_toTopOf="@+id/gk433"
                 app:layout_constraintStart_toEndOf="@+id/cb433_1" />
             <TextView
                 android:id="@+id/cb433_2t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb433_2"
                 app:layout_constraintStart_toStartOf="@+id/cb433_2"
                 app:layout_constraintTop_toBottomOf="@+id/cb433_2"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb433_3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:textStyle="bold"
-                android:textSize="15sp"
-                android:textColor="@color/black"
-                android:gravity="center"
+                style="@style/playerbtn"
                 android:layout_marginEnd="50dp"
                 android:layout_marginBottom="50dp"
-                android:background="@drawable/playerimg"
-                android:text="Button"
                 app:layout_constraintBottom_toTopOf="@+id/gk433"
                 app:layout_constraintEnd_toStartOf="@+id/cb433_4" />
             <TextView
                 android:id="@+id/cb433_3t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb433_3"
                 app:layout_constraintStart_toStartOf="@+id/cb433_3"
                 app:layout_constraintTop_toBottomOf="@+id/cb433_3"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb433_4"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:gravity="center"
+                style="@style/playerbtn"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="65dp"
-                android:background="@drawable/playerimg"
-                android:text="Button"
                 app:layout_constraintBottom_toTopOf="@+id/gk433"
                 app:layout_constraintEnd_toEndOf="parent" />
             <TextView
                 android:id="@+id/cb433_4t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb433_4"
                 app:layout_constraintStart_toStartOf="@+id/cb433_4"
                 app:layout_constraintTop_toBottomOf="@+id/cb433_4"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cm433_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="15sp"
-                android:gravity="center"
-                android:background="@drawable/playerimg"
+                style="@style/playerbtn"
                 android:layout_marginStart="50dp"
                 android:layout_marginBottom="150dp"
-                android:text="Button"
                 app:layout_constraintBottom_toTopOf="@+id/cb433_1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/cm433_3" />
             <TextView
                 android:id="@+id/cm433_1t"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cm433_1"
                 app:layout_constraintStart_toStartOf="@+id/cm433_1"
                 app:layout_constraintTop_toBottomOf="@+id/cm433_1"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cm433_2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:background="@drawable/playerimg"
-                android:textStyle="bold"
-                android:gravity="center"
+                style="@style/playerbtn"
                 android:layout_marginBottom="140dp"
-                android:text="Button"
                 app:layout_constraintBottom_toTopOf="@+id/cb433_2"
                 app:layout_constraintEnd_toStartOf="@+id/cm433_3"
                 app:layout_constraintStart_toEndOf="@+id/cm433_1" />
             <TextView
                 android:id="@+id/cm433_2t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cm433_2"
                 app:layout_constraintStart_toStartOf="@+id/cm433_2"
                 app:layout_constraintTop_toBottomOf="@+id/cm433_2"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cm433_3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:textSize="15sp"
-                android:background="@drawable/playerimg"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:gravity="center"
+                style="@style/playerbtn"
                 android:layout_marginEnd="50dp"
                 android:layout_marginBottom="150dp"
-                android:text="Button"
                 app:layout_constraintBottom_toTopOf="@+id/cb433_4"
                 app:layout_constraintEnd_toEndOf="parent" />
             <TextView
                 android:id="@+id/cm433_3t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cm433_3"
                 app:layout_constraintStart_toStartOf="@+id/cm433_3"
                 app:layout_constraintTop_toBottomOf="@+id/cm433_3">
@@ -556,25 +346,15 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/f433_1"
-                android:layout_width="50dp"
-                android:textColor="@color/black"
-                android:layout_height="50dp"
-                android:textStyle="bold"
-                android:textSize="15sp"
-                android:gravity="center"
+                style="@style/playerbtn"
                 android:layout_marginStart="80dp"
                 android:background="@drawable/playerimg"
-                android:text="Button"
                 app:layout_constraintBottom_toBottomOf="@+id/f433_3"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/f433_3" />
             <TextView
                 android:id="@+id/f433_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/f433_1"
                 app:layout_constraintStart_toStartOf="@+id/f433_1"
                 app:layout_constraintTop_toBottomOf="@+id/f433_1">
@@ -582,25 +362,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/f433_2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/playerimg"
-                android:textStyle="bold"
-                android:textSize="15sp"
-                android:gravity="center"
+                style="@style/playerbtn"
                 android:layout_marginTop="24dp"
-                android:text="Button"
-                android:textColor="@color/black"
                 app:layout_constraintEnd_toStartOf="@+id/f433_3"
                 app:layout_constraintStart_toEndOf="@+id/f433_1"
                 app:layout_constraintTop_toTopOf="parent" />
             <TextView
                 android:id="@+id/f433_2t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/f433_2"
                 app:layout_constraintStart_toStartOf="@+id/f433_2"
                 app:layout_constraintTop_toBottomOf="@+id/f433_2">
@@ -608,26 +377,15 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/f433_3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:textSize="15sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:gravity="center"
+                style="@style/playerbtn"
                 android:layout_marginEnd="80dp"
                 android:layout_marginBottom="90dp"
-                android:background="@drawable/playerimg"
-                android:text="Button"
                 app:layout_constraintBottom_toTopOf="@+id/cm433_3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
             <TextView
                 android:id="@+id/f433_3t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/f433_3"
                 app:layout_constraintStart_toStartOf="@+id/f433_3"
                 app:layout_constraintTop_toBottomOf="@+id/f433_3">
@@ -648,203 +406,115 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/gk4231"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginBottom="24dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/gk4231t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/gk4231"
                 app:layout_constraintStart_toStartOf="@+id/gk4231"
                 app:layout_constraintTop_toBottomOf="@+id/gk4231" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb4231_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="100dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/gk4231"
                 app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/cb4231_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb4231_1"
                 app:layout_constraintStart_toStartOf="@+id/cb4231_1"
                 app:layout_constraintTop_toBottomOf="@+id/cb4231_1"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb4231_2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="50dp"
                 android:layout_marginBottom="80dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/gk4231"
                 app:layout_constraintStart_toEndOf="@+id/cb4231_1" />
 
             <TextView
                 android:id="@+id/cb4231_2t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb4231_2"
                 app:layout_constraintStart_toStartOf="@+id/cb4231_2"
                 app:layout_constraintTop_toBottomOf="@+id/cb4231_2" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb4231_3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginEnd="50dp"
                 android:layout_marginBottom="80dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/gk4231"
                 app:layout_constraintEnd_toStartOf="@+id/cb4231_4" />
             <TextView
                 android:id="@+id/cb4231_3t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb4231_3"
                 app:layout_constraintStart_toStartOf="@+id/cb4231_3"
                 app:layout_constraintTop_toBottomOf="@+id/cb4231_3"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb4231_4"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="100dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/gk4231"
                 app:layout_constraintEnd_toEndOf="parent" />
             <TextView
                 android:id="@+id/cb4231_4t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb4231_4"
                 app:layout_constraintStart_toStartOf="@+id/cb4231_4"
                 app:layout_constraintTop_toBottomOf="@+id/cb4231_4"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cm4231_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="100dp"
                 android:layout_marginBottom="50dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/cb4231_1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/m4231_1t" />
             <TextView
                 android:id="@+id/cm4231_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cm4231_1"
                 app:layout_constraintStart_toStartOf="@+id/cm4231_1"
                 app:layout_constraintTop_toBottomOf="@+id/cm4231_1" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cm4231_2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginEnd="100dp"
                 android:layout_marginBottom="50dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/cb4231_4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/m4231_2t" />
             <TextView
                 android:id="@+id/cm4231_2t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cm4231_2"
                 app:layout_constraintStart_toStartOf="@+id/cm4231_2"
                 app:layout_constraintTop_toBottomOf="@+id/cm4231_2"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/m4231_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="32dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/m4231_2t"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/m4231_2" />
             <TextView
                 android:id="@+id/m4231_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/m4231_1"
                 app:layout_constraintStart_toStartOf="@+id/m4231_1"
                 app:layout_constraintTop_toBottomOf="@+id/m4231_1">
@@ -852,25 +522,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/m4231_2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/m4231_3"
                 app:layout_constraintStart_toEndOf="@+id/m4231_1"
                 app:layout_constraintTop_toBottomOf="@+id/f4231_1t" />
             <TextView
                 android:id="@+id/m4231_2t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/m4231_2"
                 app:layout_constraintStart_toStartOf="@+id/m4231_2"
                 app:layout_constraintTop_toBottomOf="@+id/m4231_2">
@@ -878,25 +537,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/m4231_3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginEnd="32dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/m4231_2t"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/m4231_2" />
             <TextView
                 android:id="@+id/m4231_3t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/m4231_3"
                 app:layout_constraintStart_toStartOf="@+id/m4231_3"
                 app:layout_constraintTop_toBottomOf="@+id/m4231_3">
@@ -904,25 +552,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/f4231_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginTop="24dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
             <TextView
                 android:id="@+id/f4231_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/f4231_1"
                 app:layout_constraintStart_toStartOf="@+id/f4231_1"
                 app:layout_constraintTop_toBottomOf="@+id/f4231_1">
@@ -943,200 +580,112 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/gk451"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginBottom="24dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/gk451t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/gk451"
                 app:layout_constraintStart_toStartOf="@+id/gk451"
                 app:layout_constraintTop_toBottomOf="@+id/gk451" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb451_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="70dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/gk451"
                 app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/cb451_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb451_1"
                 app:layout_constraintStart_toStartOf="@+id/cb451_1"
                 app:layout_constraintTop_toBottomOf="@+id/cb451_1"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb451_2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="50dp"
                 android:layout_marginBottom="60dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/gk451"
                 app:layout_constraintStart_toEndOf="@+id/cb451_1" />
             <TextView
                 android:id="@+id/cb451_2t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb451_2"
                 app:layout_constraintStart_toStartOf="@+id/cb451_2"
                 app:layout_constraintTop_toBottomOf="@+id/cb451_2"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb451_3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginEnd="50dp"
                 android:layout_marginBottom="60dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/gk451"
                 app:layout_constraintEnd_toStartOf="@+id/cb451_4" />
             <TextView
                 android:id="@+id/cb451_3t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb451_3"
                 app:layout_constraintStart_toStartOf="@+id/cb451_3"
                 app:layout_constraintTop_toBottomOf="@+id/cb451_3"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb451_4"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="70dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/gk451"
                 app:layout_constraintEnd_toEndOf="parent" />
             <TextView
                 android:id="@+id/cb451_4t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb451_4"
                 app:layout_constraintStart_toStartOf="@+id/cb451_4"
                 app:layout_constraintTop_toBottomOf="@+id/cb451_4"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cm451_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/m451_3t"
                 app:layout_constraintStart_toEndOf="@+id/m451_2t"
                 app:layout_constraintTop_toBottomOf="@+id/m451_2t" />
             <TextView
                 android:id="@+id/cm451_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cm451_1"
                 app:layout_constraintStart_toStartOf="@+id/cm451_1"
                 app:layout_constraintTop_toBottomOf="@+id/cm451_1" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/m451_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="70dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/f451_1t" />
             <TextView
                 android:id="@+id/m451_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/m451_1"
                 app:layout_constraintStart_toStartOf="@+id/m451_1"
                 app:layout_constraintTop_toBottomOf="@+id/m451_1"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/m451_2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="90dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/m451_1"
                 app:layout_constraintTop_toBottomOf="@+id/f451_1t" />
             <TextView
                 android:id="@+id/m451_2t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/m451_2"
                 app:layout_constraintStart_toStartOf="@+id/m451_2"
                 app:layout_constraintTop_toBottomOf="@+id/m451_2">
@@ -1144,25 +693,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/m451_3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginTop="90dp"
                 android:layout_marginEnd="40dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/m451_4"
                 app:layout_constraintTop_toBottomOf="@+id/f451_1t" />
             <TextView
                 android:id="@+id/m451_3t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/m451_3"
                 app:layout_constraintStart_toStartOf="@+id/m451_3"
                 app:layout_constraintTop_toBottomOf="@+id/m451_3">
@@ -1170,25 +708,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/m451_4"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginTop="70dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/f451_1t" />
             <TextView
                 android:id="@+id/m451_4t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/m451_4"
                 app:layout_constraintStart_toStartOf="@+id/m451_4"
                 app:layout_constraintTop_toBottomOf="@+id/m451_4">
@@ -1196,25 +723,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/f451_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
             <TextView
                 android:id="@+id/f451_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/f451_1"
                 app:layout_constraintStart_toStartOf="@+id/f451_1"
                 app:layout_constraintTop_toBottomOf="@+id/f451_1">
@@ -1235,202 +751,114 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/gk4411"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginBottom="24dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/gk4411t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/gk4411"
                 app:layout_constraintStart_toStartOf="@+id/gk4411"
                 app:layout_constraintTop_toBottomOf="@+id/gk4411" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb4411_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="70dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/gk4411"
                 app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/cb4411_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb4411_1"
                 app:layout_constraintStart_toStartOf="@+id/cb4411_1"
                 app:layout_constraintTop_toBottomOf="@+id/cb4411_1"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb4411_2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="50dp"
                 android:layout_marginBottom="60dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/gk4411"
                 app:layout_constraintStart_toEndOf="@+id/cb4411_1" />
             <TextView
                 android:id="@+id/cb4411_2t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb4411_2"
                 app:layout_constraintStart_toStartOf="@+id/cb4411_2"
                 app:layout_constraintTop_toBottomOf="@+id/cb4411_2"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb4411_3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginEnd="50dp"
                 android:layout_marginBottom="60dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/gk4411"
                 app:layout_constraintEnd_toStartOf="@+id/cb4411_4" />
             <TextView
                 android:id="@+id/cb4411_3t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb4411_3"
                 app:layout_constraintStart_toStartOf="@+id/cb4411_3"
                 app:layout_constraintTop_toBottomOf="@+id/cb4411_3"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb4411_4"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="70dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/gk4411"
                 app:layout_constraintEnd_toEndOf="parent" />
             <TextView
                 android:id="@+id/cb4411_4t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb4411_4"
                 app:layout_constraintStart_toStartOf="@+id/cb4411_4"
                 app:layout_constraintTop_toBottomOf="@+id/cb4411_4"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cm4411_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
+                style="@style/playerbtn"
                 app:layout_constraintBottom_toTopOf="@+id/m4411_2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/f4411_1t" />
             <TextView
                 android:id="@+id/cm4411_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cm4411_1"
                 app:layout_constraintStart_toStartOf="@+id/cm4411_1"
                 app:layout_constraintTop_toBottomOf="@+id/cm4411_1" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/m4411_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="70dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/cb4411_1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/f4411_1t" />
             <TextView
                 android:id="@+id/m4411_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/m4411_1"
                 app:layout_constraintStart_toStartOf="@+id/m4411_1"
                 app:layout_constraintTop_toBottomOf="@+id/m4411_1"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/m4411_2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="90dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/cb4411_2"
                 app:layout_constraintStart_toEndOf="@+id/m4411_1"
                 app:layout_constraintTop_toBottomOf="@+id/f4411_1t" />
             <TextView
                 android:id="@+id/m4411_2t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/m4411_2"
                 app:layout_constraintStart_toStartOf="@+id/m4411_2"
                 app:layout_constraintTop_toBottomOf="@+id/m4411_2">
@@ -1438,26 +866,15 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/m4411_3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginTop="90dp"
                 android:layout_marginEnd="40dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/cb4411_3"
                 app:layout_constraintEnd_toStartOf="@+id/m4411_4"
                 app:layout_constraintTop_toBottomOf="@+id/f4411_1t" />
             <TextView
                 android:id="@+id/m4411_3t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/m4411_3"
                 app:layout_constraintStart_toStartOf="@+id/m4411_3"
                 app:layout_constraintTop_toBottomOf="@+id/m4411_3">
@@ -1465,26 +882,15 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/m4411_4"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginTop="70dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/cb4411_4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/f4411_1t" />
             <TextView
                 android:id="@+id/m4411_4t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/m4411_4"
                 app:layout_constraintStart_toStartOf="@+id/m4411_4"
                 app:layout_constraintTop_toBottomOf="@+id/m4411_4">
@@ -1492,23 +898,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/f4411_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
             <TextView
                 android:id="@+id/f4411_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/f4411_1"
                 app:layout_constraintStart_toStartOf="@+id/f4411_1"
                 app:layout_constraintTop_toBottomOf="@+id/f4411_1">
@@ -1529,149 +926,84 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/gk343"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginBottom="24dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/gk343t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/gk343"
                 app:layout_constraintStart_toStartOf="@+id/gk343"
                 app:layout_constraintTop_toBottomOf="@+id/gk343" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb343_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="32dp"
                 android:layout_marginBottom="100dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/gk343"
                 app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/cb343_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb343_1"
                 app:layout_constraintStart_toStartOf="@+id/cb343_1"
                 app:layout_constraintTop_toBottomOf="@+id/cb343_1"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb343_2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginBottom="50dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/gk343"
                 app:layout_constraintEnd_toStartOf="@+id/cb343_3"
                 app:layout_constraintStart_toEndOf="@+id/cb343_1" />
             <TextView
                 android:id="@+id/cb343_2t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb343_2"
                 app:layout_constraintStart_toStartOf="@+id/cb343_2"
                 app:layout_constraintTop_toBottomOf="@+id/cb343_2"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cb343_3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginEnd="32dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
                 app:layout_constraintBottom_toTopOf="@+id/cb343_1t"
                 app:layout_constraintEnd_toEndOf="parent" />
             <TextView
                 android:id="@+id/cb343_3t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/cb343_3"
                 app:layout_constraintStart_toStartOf="@+id/cb343_3"
                 app:layout_constraintTop_toBottomOf="@+id/cb343_3"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/m343_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="120dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/cb343_1"
                 app:layout_constraintStart_toStartOf="parent" />
             <TextView
                 android:id="@+id/m343_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/m343_1"
                 app:layout_constraintStart_toStartOf="@+id/m343_1"
                 app:layout_constraintTop_toBottomOf="@+id/m343_1"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/m343_2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="50dp"
                 android:layout_marginBottom="80dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/cb343_1"
                 app:layout_constraintStart_toEndOf="@+id/m343_1"
                 app:layout_constraintTop_toTopOf="@+id/m343_1" />
             <TextView
                 android:id="@+id/m343_2t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/m343_2"
                 app:layout_constraintStart_toStartOf="@+id/m343_2"
                 app:layout_constraintTop_toBottomOf="@+id/m343_2" />
@@ -1679,26 +1011,15 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/m343_3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginEnd="50dp"
                 android:layout_marginBottom="80dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/cb343_3"
                 app:layout_constraintEnd_toStartOf="@+id/m343_4"
                 app:layout_constraintTop_toTopOf="@+id/m343_4" />
             <TextView
                 android:id="@+id/m343_3t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/m343_3"
                 app:layout_constraintStart_toStartOf="@+id/m343_3"
                 app:layout_constraintTop_toBottomOf="@+id/m343_3">
@@ -1706,25 +1027,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/m343_4"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="120dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="Button"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/cb343_3"
                 app:layout_constraintEnd_toEndOf="parent" />
             <TextView
                 android:id="@+id/m343_4t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/m343_4"
                 app:layout_constraintStart_toStartOf="@+id/m343_4"
                 app:layout_constraintTop_toBottomOf="@+id/m343_4">
@@ -1732,25 +1042,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/f343_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginStart="50dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/m343_1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
             <TextView
                 android:id="@+id/f343_1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="TextView"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/f343_1"
                 app:layout_constraintStart_toStartOf="@+id/f343_1"
                 app:layout_constraintTop_toBottomOf="@+id/f343_1">
@@ -1758,23 +1057,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/f343_2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
+                style="@style/playerbtn"
                 app:layout_constraintBottom_toBottomOf="@+id/f343_1"
                 app:layout_constraintEnd_toStartOf="@+id/f343_3"
                 app:layout_constraintStart_toEndOf="@+id/f343_1"
                 app:layout_constraintTop_toTopOf="parent" />
             <TextView
                 android:id="@+id/f343_2t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/f343_2"
                 app:layout_constraintStart_toStartOf="@+id/f343_2"
                 app:layout_constraintTop_toBottomOf="@+id/f343_2">
@@ -1782,23 +1072,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/f343_3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                style="@style/playerbtn"
                 android:layout_marginEnd="50dp"
-                android:background="@drawable/playerimg"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/m343_3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
             <TextView
                 android:id="@+id/f343_3t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                style="@style/playernum"
                 app:layout_constraintEnd_toEndOf="@+id/f343_3"
                 app:layout_constraintStart_toStartOf="@+id/f343_3"
                 app:layout_constraintTop_toBottomOf="@+id/f343_3">
