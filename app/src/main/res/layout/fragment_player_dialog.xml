@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_gray_light"
+    android:background="@drawable/rounddialog"
     tools:context=".features.status.PlayerDialog">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/main_gray_light">
+        android:background="@drawable/rounddialog">
 
         <ImageView
             android:id="@+id/playerface"
