@@ -17,7 +17,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 
-        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowBackground">@drawable/footlogo</item>
     </style>
 
     <style name="Theme.Footballapp.Starting" parent="Theme.SplashScreen">
