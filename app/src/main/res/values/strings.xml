@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">footballapp</string>
+    <string name="app_name">FootDiary</string>
     <string name="Primier">프리미어리그</string>
     <string name="Champions">챔피언스</string>
     <string name="K_league">K리그</string>
