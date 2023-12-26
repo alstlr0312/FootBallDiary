@@ -39,11 +39,6 @@ class GetStatus3Fragment : Fragment() {
                 LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
             recyclerView.adapter = adapter
 
-            subrecyclerView = binding.subRv
-            subadapter = SublineupAdapter(requireContext())
-            subrecyclerView.layoutManager =
-                GridLayoutManager(requireContext(), 3, LinearLayoutManager.VERTICAL, false)
-            subrecyclerView.adapter = subadapter
 
             val data = it.getSerializable("data") as StatusResponse
             if (data.response.isNotEmpty() && data.response[0].lineups.isNotEmpty()) {

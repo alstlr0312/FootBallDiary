@@ -73,7 +73,12 @@ class GetStatus1Fragment : Fragment() {
                 binding.vs.visibility = View.INVISIBLE
                 for (i in 0 until 2) {
                     for (j in 0 until 16) {
-                        statics[i][j] = data.response[0].statistics[i].statistics[j].value
+                        if(data.response[0].statistics[i].statistics[j] != null) {
+                            statics[i][j] = data.response[0].statistics[i].statistics[j].value
+                        }
+                        else{
+
+                        }
                     }
                 }
                 val indicesToRemove = listOf(1, 3, 4, 5, 14)

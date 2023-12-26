@@ -78,7 +78,7 @@ class GetStatus4Fragment : Fragment() {
                     val cm1 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:4" }
                     val cm2 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:3" }
                     val cm3 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:2" }
-                    val f1 = lineup.startXI.find { it.player.pos == "F" && it.player.grid == "3:1" }
+                    val f1 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:1" }
                     val f2 = lineup.startXI.find { it.player.pos == "F" && it.player.grid == "4:2" }
                     val f3 = lineup.startXI.find { it.player.pos == "F" && it.player.grid == "4:1" }
                     binding.gk352t.text = formatPlayerName(gp?.player?.name)?: "G"
@@ -110,12 +110,12 @@ class GetStatus4Fragment : Fragment() {
                     val cb1 = lineup.startXI.find { it.player.pos == "D" && it.player.grid == "2:4" }
                     val cb2 = lineup.startXI.find { it.player.pos == "D" && it.player.grid == "2:3" }
                     val cb3 = lineup.startXI.find { it.player.pos == "D" && it.player.grid == "2:2" }
-                    val cb4 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "2:1" }
-                    val cm1 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:1" }
-                    val cm2 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:2" }
+                    val cb4 = lineup.startXI.find { it.player.pos == "D" && it.player.grid == "2:1" }
+                    val cm1 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:2" }
+                    val cm2 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:1" }
                     val m1 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "4:3" }
-                    val m2 = lineup.startXI.find { it.player.pos == "F" && it.player.grid == "4:2" }
-                    val m3 = lineup.startXI.find { it.player.pos == "F" && it.player.grid == "4:1" }
+                    val m2 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "4:2" }
+                    val m3 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "4:1" }
                     val f1 = lineup.startXI.find { it.player.pos == "F" && it.player.grid == "5:1" }
                     binding.gk4231t.text = formatPlayerName(gp?.player?.name)?: "G"
                     binding.cb42311t.text = formatPlayerName(cb1?.player?.name)?: "D"
@@ -188,7 +188,7 @@ class GetStatus4Fragment : Fragment() {
                     val cm2 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:3" }
                     val cm3 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:2" }
                     val cm4 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:1" }
-                    val cm5 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "4:1" }
+                    val cm5 = lineup.startXI.find { it.player.pos == "F" && it.player.grid == "4:1" }
                     val f1 = lineup.startXI.find { it.player.pos == "F" && it.player.grid == "5:1" }
                     binding.gk4411t.text = formatPlayerName(gp?.player?.name)?: "G"
                     binding.cb44111t.text = formatPlayerName(cb1?.player?.name)?: "D"
@@ -250,6 +250,43 @@ class GetStatus4Fragment : Fragment() {
                     binding.f3431.text = (cm4?.player?.number ?: 0).toString()
                     binding.f3432.text = (cm5?.player?.number ?: 0).toString()
                     binding.f3433.text = (f1?.player?.number ?: 0).toString()
+                }
+                else if (formation == "3-4-2-1") {
+                    binding.f3421.visibility=View.VISIBLE
+                    val gp = lineup.startXI.find { it.player.pos == "G" && it.player.grid == "1:1" }
+                    val cb1 = lineup.startXI.find { it.player.pos == "D" && it.player.grid == "2:3" }
+                    val cb2 = lineup.startXI.find { it.player.pos == "D" && it.player.grid == "2:2" }
+                    val cb3 = lineup.startXI.find { it.player.pos == "D" && it.player.grid == "2:1" }
+                    val cb4 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:4" }
+                    val cm1 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:3" }
+                    val cm2 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:2" }
+                    val cm3 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:1" }
+                    val cm4 = lineup.startXI.find { it.player.pos == "F" && it.player.grid == "4:2" }
+                    val cm5 = lineup.startXI.find { it.player.pos == "F" && it.player.grid == "4:1" }
+                    val f1 = lineup.startXI.find { it.player.pos == "F" && it.player.grid == "5:1" }
+                    binding.gk3421t.text = formatPlayerName(gp?.player?.name)?: "G"
+                    binding.cb34211t.text = formatPlayerName(cb1?.player?.name)?: "D"
+                    binding.cb34212t.text = formatPlayerName(cb2?.player?.name)?: "D"
+                    binding.cb34213t.text = formatPlayerName(cb3?.player?.name)?: "D"
+                    binding.m34211t.text = formatPlayerName(cb4?.player?.name)?: "D"
+                    binding.m34212t.text = formatPlayerName(cm1?.player?.name)?: "M"
+                    binding.m34213t.text = formatPlayerName(cm2?.player?.name) ?: "M"
+                    binding.m34214t.text = formatPlayerName(cm3?.player?.name) ?: "M"
+                    binding.f34211t.text = formatPlayerName(cm4?.player?.name) ?: "M"
+                    binding.f34212t.text = formatPlayerName(cm5?.player?.name) ?: "M"
+                    binding.f34213t.text = formatPlayerName(f1?.player?.name) ?: "ST"
+
+                    binding.gk3421.text = (gp?.player?.number ?: 0).toString()
+                    binding.cb34211.text = (cb1?.player?.number ?: 0).toString()
+                    binding.cb34212.text = (cb2?.player?.number ?: 0).toString()
+                    binding.cb34213.text = (cb3?.player?.number ?: 0).toString()
+                    binding.m34211.text = (cb4?.player?.number ?: 0).toString()
+                    binding.m34212.text = (cm1?.player?.number ?: 0).toString()
+                    binding.m34213.text = (cm2?.player?.number ?: 0).toString()
+                    binding.m34214.text = (cm3?.player?.number ?: 0).toString()
+                    binding.f34211.text = (cm4?.player?.number ?: 0).toString()
+                    binding.f34212.text = (cm5?.player?.number ?: 0).toString()
+                    binding.f34213.text = (f1?.player?.number ?: 0).toString()
                 }
             }
         }

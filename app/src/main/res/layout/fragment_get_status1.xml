@@ -49,6 +49,8 @@
             android:text="TextView"
             android:textSize="20dp"
             android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
             app:layout_constraintBottom_toBottomOf="@+id/vs"
             app:layout_constraintEnd_toStartOf="@+id/vs"
             app:layout_constraintTop_toTopOf="@+id/vs" />
@@ -62,6 +64,8 @@
             android:text="TextView"
             android:textSize="20dp"
             android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
             app:layout_constraintBottom_toBottomOf="@+id/vs"
             app:layout_constraintStart_toEndOf="@+id/vs"
             app:layout_constraintTop_toTopOf="@+id/vs" />
