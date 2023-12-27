@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
 import soccer.diary.footballapp.databinding.FragmentStatusBinding
@@ -18,8 +20,10 @@ class StatusFragment : Fragment(), onBackPressedListener {
     private val viewModel by viewModels<StatusViewModel>()
     var code: Int = 0
     var backPressedTime: Long = 0
-
-
+    private lateinit var hadapter: HomeGoalAdapter
+    private lateinit var hrecyclerView: RecyclerView
+    private lateinit var aadapter: AwayGoalAdapter
+    private lateinit var arecyclerView: RecyclerView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,7 +35,6 @@ class StatusFragment : Fragment(), onBackPressedListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         arguments?.let {
-
             code = it.getInt("code", 0)
             Log.d("code",code.toString())
             viewModel.status(code)
@@ -76,6 +79,32 @@ class StatusFragment : Fragment(), onBackPressedListener {
             var league = data.response[0].league.name
             if(league=="Friendlies"){
                 league="친선전"
+            }
+            val homename = data.response[0].teams.home.name
+            val awayname= data.response[0].teams.away.name
+            val eventData = data.response[0].events
+            hrecyclerView = binding.homerv
+            hadapter = HomeGoalAdapter(requireContext())
+            hrecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+            hrecyclerView.adapter = hadapter
+
+            arecyclerView = binding.awayrv
+            aadapter = AwayGoalAdapter(requireContext())
+            arecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+            arecyclerView.adapter = aadapter
+
+            val goalEventsByTeam = eventData.filter { it.type == "Goal" }.groupBy { it.team.name }
+
+            for ((teamName, events) in goalEventsByTeam) {
+                println("Team: $teamName")
+                for (event in events) {
+                    val playerName = event.player.name
+                    if(teamName==homename){
+                        hadapter.addGoal(playerName)
+                    }else if(teamName==awayname){
+                        aadapter.addGoal(playerName)
+                    }
+                }
             }
             binding.leaguename.text=league
             val viewPager2Adapter = ViewPager2Adapter(requireActivity())

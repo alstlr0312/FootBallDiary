@@ -51,9 +51,6 @@ class GetStatus1Fragment : Fragment() {
             val referee=data.response[0].fixture.referee
             val stadium=data.response[0].fixture.venue.name
             val status = data.response[0].fixture.status.short
-            Log.d("statsdf",status)
-            Log.d("statsdf",hometeam)
-            Log.d("statsdf",leagueflag)
             val NS="NS"
             if(status == NS){
                 binding.roundTxt.text = round

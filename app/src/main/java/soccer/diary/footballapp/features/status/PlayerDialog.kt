@@ -35,7 +35,7 @@ class PlayerDialog : DialogFragment(), onBackPressedListener{
                 val num = it.games.number.toString()
                 val playtime = it.games.minutes.toString()
                 val rateing = it.games.rating?.toFloat() ?: 0.0f
-                val goal = it.goals.conceded.toString()
+                val goal = it.goals.total?.toString()?: "0"
                 val assist = it.goals.assists?.toString() ?: "0"
                 val totalshot = it.shots.total.toString()
                 val onshot = it.shots.on.toString()
