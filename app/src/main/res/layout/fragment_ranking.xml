@@ -2,8 +2,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="350dp"
-    android:layout_height="600dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/rounddialog"
     tools:context=".features.Ranking.RankingFragment">
 
@@ -14,11 +14,15 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
-            android:layout_width="330dp"
-            android:layout_height="570dp"
+            android:layout_width="350dp"
+            android:layout_height="620dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rank_recyclerview"
@@ -37,12 +41,14 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:text="No."
             android:textColor="@color/black"
+            android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
-            app:layout_constraintStart_toStartOf="@+id/constraintLayout2" />
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView6"
@@ -52,6 +58,7 @@
             android:text="team"
             android:textStyle="bold"
             android:textColor="@color/black"
+            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView5"
             app:layout_constraintStart_toEndOf="@+id/textView5"
             app:layout_constraintTop_toTopOf="@+id/textView5" />
@@ -65,6 +72,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold"
+            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView6"
             app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
             app:layout_constraintTop_toTopOf="@+id/textView6" />
@@ -75,6 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
             android:text="L"
+            android:textSize="15sp"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold"
@@ -88,6 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
             android:text="D"
+            android:textSize="15sp"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold"
@@ -100,6 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
             android:text="W"
+            android:textSize="15sp"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold"
@@ -112,6 +123,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
             android:text="G"
+            android:textSize="15sp"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold"

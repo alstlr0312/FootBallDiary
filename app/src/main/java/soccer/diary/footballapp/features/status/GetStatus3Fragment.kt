@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import soccer.diary.footballapp.databinding.FragmentGetStatus3Binding
+import soccer.diary.footballapp.features.home.HorizontalItemDecorator
 import soccer.diary.footballapp.model.StatusResponse
 import soccer.diary.footballapp.model.lineupitem
 
@@ -35,8 +36,9 @@ class GetStatus3Fragment : Fragment() {
         arguments?.let {
             recyclerView = binding.startRv
             adapter = LineupAdapter(requireContext())
-            recyclerView.layoutManager =
-                LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+            recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+            recyclerView.setHasFixedSize(true)
+            recyclerView.addItemDecoration(HorizontalItemDecorator(40))
             recyclerView.adapter = adapter
 
 
