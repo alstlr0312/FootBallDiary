@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/gray"
     tools:context=".features.home.MainActivity">
-
+    <include layout="@layout/loading_dialog" />
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"

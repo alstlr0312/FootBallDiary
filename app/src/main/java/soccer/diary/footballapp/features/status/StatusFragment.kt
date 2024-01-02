@@ -7,11 +7,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
+import soccer.diary.footballapp.R
 import soccer.diary.footballapp.databinding.FragmentStatusBinding
 import soccer.diary.footballapp.model.*
 
@@ -24,11 +26,14 @@ class StatusFragment : Fragment(), onBackPressedListener {
     private lateinit var hrecyclerView: RecyclerView
     private lateinit var aadapter: AwayGoalAdapter
     private lateinit var arecyclerView: RecyclerView
+    private lateinit var loadingProgressBar: ProgressBar
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentStatusBinding.inflate(inflater, container, false)
+        loadingProgressBar = binding.root.findViewById(R.id.LoadingBar)
+        loadingProgressBar.visibility = View.VISIBLE
         return binding.root
     }
 
@@ -50,6 +55,7 @@ class StatusFragment : Fragment(), onBackPressedListener {
 
     private fun subscribeUI() {
         viewModel.statusResponse.observe(viewLifecycleOwner) { data ->
+            loadingProgressBar.visibility = View.INVISIBLE
             val homeimg = data.response[0].teams.home.logo
             val homescore = data.response[0].goals.home
             binding.shomeScore.text = homescore.toString()

@@ -8,10 +8,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import soccer.diary.footballapp.R
 import soccer.diary.footballapp.databinding.FragmentRankingBinding
 import soccer.diary.footballapp.features.LeagueDiary.LeagueViewModel
 import soccer.diary.footballapp.features.home.NationalAdapter
@@ -26,10 +28,12 @@ class RankingFragment : DialogFragment(), onBackPressedListener {
     private lateinit var binding: FragmentRankingBinding
     private lateinit var adapter: RankAdapter
     private lateinit var recyclerView: RecyclerView
-
+    private lateinit var loadingProgressBar: ProgressBar
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         binding = FragmentRankingBinding.inflate(layoutInflater)
         val view = binding.root
+        loadingProgressBar = binding.root.findViewById(R.id.LoadingBar)
+        loadingProgressBar.visibility = View.VISIBLE
         recyclerView = binding.rankRecyclerview
         adapter = RankAdapter(requireContext())
         recyclerView.layoutManager =
@@ -51,6 +55,7 @@ class RankingFragment : DialogFragment(), onBackPressedListener {
 
     private fun subscribeUI() {
         viewModel.RankResponse.observe(this) { data ->
+            loadingProgressBar.visibility = View.INVISIBLE
             val standings = data.response[0].league.standings[0]
             for (standing in standings) {
                 val rank = standing.rank

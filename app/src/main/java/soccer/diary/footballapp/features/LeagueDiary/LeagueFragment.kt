@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -27,12 +28,14 @@ class LeagueFragment : Fragment(), onBackPressedListener {
     private val viewModel by viewModels<LeagueViewModel>()
     var code:Int = 0
     var backPressedTime : Long = 0
-
+    private lateinit var loadingProgressBar: ProgressBar
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentLeagueBinding.inflate(inflater, container, false)
+        loadingProgressBar = binding.root.findViewById(R.id.LoadingBar)
+        loadingProgressBar.visibility = View.VISIBLE
         return binding.root
     }
 
@@ -113,6 +116,7 @@ class LeagueFragment : Fragment(), onBackPressedListener {
     private fun subscribeUI() {
         viewModel.fixturesResponse.removeObservers(viewLifecycleOwner)
         viewModel.fixturesResponse.observe(viewLifecycleOwner) { data ->
+            loadingProgressBar.visibility = View.INVISIBLE
             if (data.results == 0) {
                 binding.nogame2.visibility = View.VISIBLE
             } else {

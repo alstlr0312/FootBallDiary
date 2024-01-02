@@ -23,7 +23,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5">
-
+            <include layout="@layout/loading_dialog" />
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rank_recyclerview"
                 android:layout_width="match_parent"
