@@ -34,7 +34,6 @@
         private lateinit var Ladapter: MainLeagueAdapter
         private lateinit var Nadapter: NationalAdapter
         private lateinit var NrecyclerView: RecyclerView
-        private lateinit var loadingProgressBar: ProgressBar
         @SuppressLint("UseCompatLoadingForDrawables")
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -42,7 +41,6 @@
             installSplashScreen()
             binding = ActivityMainBinding.inflate(layoutInflater)
             setContentView(binding.root)
-            loadingProgressBar = findViewById(R.id.LoadingBar)
             LrecyclerView = binding.leagueRv
             Ladapter = MainLeagueAdapter()
 
@@ -83,7 +81,6 @@
             }
             NrecyclerView.adapter = Nadapter
             NrecyclerView.addItemDecoration(VerticalItemDecorator(20))
-            loadingProgressBar.visibility = View.VISIBLE
             viewModel.getFixtures(10, year, previousDateString, dateString)
             subscribeUI()
         }
@@ -103,15 +100,17 @@
 
 
         private fun subscribeUI() {
+            val loadingDialog = LoadingDialog(this)
+            viewModel.loading.observe(this){ isLoading ->
+                if (isLoading) loadingDialog.show() else loadingDialog.dismiss()
+            }
             viewModel.fixturesResponse.observe(this) { data ->
                 runOnUiThread {
-                    loadingProgressBar.visibility = View.INVISIBLE
                     if (data.results == 0) {
                         binding.nogame.visibility = View.VISIBLE
                     } else {
                         binding.nogame.visibility = View.INVISIBLE
                         val sortedResponse = data.response.sortedBy { it.fixture.date }
-
                         for (i in sortedResponse) {
                             val homeimg = i.teams.home.logo
                             val homescore = i.goals.home
