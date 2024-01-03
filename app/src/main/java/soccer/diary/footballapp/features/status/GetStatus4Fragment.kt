@@ -251,6 +251,43 @@ class GetStatus4Fragment : Fragment() {
                     binding.f3432.text = (cm5?.player?.number ?: 0).toString()
                     binding.f3433.text = (f1?.player?.number ?: 0).toString()
                 }
+                else if (formation == "4-3-1-2") {
+                    binding.f3421.visibility=View.VISIBLE
+                    val gp = lineup.startXI.find { it.player.pos == "G" && it.player.grid == "1:1" }
+                    val cb1 = lineup.startXI.find { it.player.pos == "D" && it.player.grid == "2:4" }
+                    val cb2 = lineup.startXI.find { it.player.pos == "D" && it.player.grid == "2:3" }
+                    val cb3 = lineup.startXI.find { it.player.pos == "D" && it.player.grid == "2:2" }
+                    val cb4 = lineup.startXI.find { it.player.pos == "D" && it.player.grid == "2:1" }
+                    val cm1 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:3" }
+                    val cm2 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:2" }
+                    val cm3 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "3:1" }
+                    val cm4 = lineup.startXI.find { it.player.pos == "M" && it.player.grid == "4:1" }
+                    val cm5 = lineup.startXI.find { it.player.pos == "F" && it.player.grid == "5:1" }
+                    val f1 = lineup.startXI.find { it.player.pos == "F" && it.player.grid == "5:2" }
+                    binding.gk4312t.text = formatPlayerName(gp?.player?.name)?: "G"
+                    binding.cb43121t.text = formatPlayerName(cb1?.player?.name)?: "D"
+                    binding.cb43122t.text = formatPlayerName(cb2?.player?.name)?: "D"
+                    binding.cb43123t.text = formatPlayerName(cb3?.player?.name)?: "D"
+                    binding.cb43124t.text = formatPlayerName(cb4?.player?.name)?: "D"
+                    binding.m43121t.text = formatPlayerName(cm1?.player?.name)?: "M"
+                    binding.m43122t.text = formatPlayerName(cm2?.player?.name) ?: "M"
+                    binding.m43123t.text = formatPlayerName(cm3?.player?.name) ?: "M"
+                    binding.m43124t.text = formatPlayerName(cm4?.player?.name) ?: "M"
+                    binding.f43121t.text = formatPlayerName(cm5?.player?.name) ?: "M"
+                    binding.f43122t.text = formatPlayerName(f1?.player?.name) ?: "ST"
+
+                    binding.gk4312.text = (gp?.player?.number ?: 0).toString()
+                    binding.cb43121.text = (cb1?.player?.number ?: 0).toString()
+                    binding.cb43122.text = (cb2?.player?.number ?: 0).toString()
+                    binding.cb43123.text = (cb3?.player?.number ?: 0).toString()
+                    binding.cb43124.text = (cb4?.player?.number ?: 0).toString()
+                    binding.m43121.text = (cm1?.player?.number ?: 0).toString()
+                    binding.m43122.text = (cm2?.player?.number ?: 0).toString()
+                    binding.m43123.text = (cm3?.player?.number ?: 0).toString()
+                    binding.m43124.text = (cm4?.player?.number ?: 0).toString()
+                    binding.f43121.text = (cm5?.player?.number ?: 0).toString()
+                    binding.f43122.text = (f1?.player?.number ?: 0).toString()
+                }
                 else if (formation == "3-4-2-1") {
                     binding.f3421.visibility=View.VISIBLE
                     val gp = lineup.startXI.find { it.player.pos == "G" && it.player.grid == "1:1" }

@@ -48,7 +48,7 @@ class LeagueFragment : Fragment(), onBackPressedListener {
         val calendar = Calendar.getInstance()
         val year = calendar.get(Calendar.YEAR)
         calendar.time = currentDate
-        calendar.add(Calendar.DAY_OF_MONTH, -2)
+        calendar.add(Calendar.DAY_OF_MONTH, -1)
         val previousDate = calendar.time
         val previousDateString = dateFormat.format(previousDate)
         calendar.time = currentDate
@@ -61,7 +61,7 @@ class LeagueFragment : Fragment(), onBackPressedListener {
         NrecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         NrecyclerView.adapter = Nadapter
         NrecyclerView.addItemDecoration(VerticalItemDecorator(20))
-        viewModel.getFixtures(code, year, previousDateString, nextDateString)
+        viewModel.getFixtures(code, 2023, previousDateString, nextDateString)
         subscribeUI()
     }
     fun setbackground(code: Int) {

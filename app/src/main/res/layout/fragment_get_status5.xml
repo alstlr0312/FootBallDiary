@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".features.status.GetStatus4Fragment">
+    tools:context=".features.status.GetStatus5Fragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -1266,6 +1266,178 @@
                 app:layout_constraintTop_toBottomOf="@+id/f3421_3">
             </TextView>
         </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/f4312"
+            android:visibility="invisible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView3"
+            app:layout_constraintVertical_bias="1.0">
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/gk4312"
+                style="@style/playerbtn"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/gk4312t"
+                style="@style/playernum"
+                app:layout_constraintEnd_toEndOf="@+id/gk4312"
+                app:layout_constraintStart_toStartOf="@+id/gk4312"
+                app:layout_constraintTop_toBottomOf="@+id/gk4312" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cb4312_1"
+                style="@style/playerbtn"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                app:layout_constraintBottom_toTopOf="@+id/gk4312"
+                app:layout_constraintEnd_toStartOf="@+id/gk4312"
+                app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/cb4312_1t"
+                style="@style/playernum"
+                app:layout_constraintEnd_toEndOf="@+id/cb4312_1"
+                app:layout_constraintStart_toStartOf="@+id/cb4312_1"
+                app:layout_constraintTop_toBottomOf="@+id/cb4312_1"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cb4312_2"
+                style="@style/playerbtn"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cb4312_1"
+                app:layout_constraintStart_toEndOf="@+id/cb4312_1"
+                app:layout_constraintTop_toTopOf="@+id/cb4312_1" />
+            <TextView
+                android:id="@+id/cb4312_2t"
+                style="@style/playernum"
+                app:layout_constraintEnd_toEndOf="@+id/cb4312_2"
+                app:layout_constraintStart_toStartOf="@+id/cb4312_2"
+                app:layout_constraintTop_toBottomOf="@+id/cb4312_2"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cb4312_3"
+                style="@style/playerbtn"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="40dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cb4312_4"
+                app:layout_constraintEnd_toStartOf="@+id/cb4312_4"
+                app:layout_constraintTop_toTopOf="@+id/cb4312_4" />
+            <TextView
+                android:id="@+id/cb4312_3t"
+                style="@style/playernum"
+                app:layout_constraintEnd_toEndOf="@+id/cb4312_3"
+                app:layout_constraintStart_toStartOf="@+id/cb4312_3"
+                app:layout_constraintTop_toBottomOf="@+id/cb4312_3"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cb4312_4"
+                style="@style/playerbtn"
+                android:layout_marginStart="50dp"
+                android:layout_marginBottom="50dp"
+                app:layout_constraintBottom_toTopOf="@+id/gk4312"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/gk4312"
+                app:layout_constraintTop_toTopOf="@+id/cb4312_1" />
+            <TextView
+                android:id="@+id/cb4312_4t"
+                style="@style/playernum"
+                app:layout_constraintEnd_toEndOf="@+id/cb4312_4"
+                app:layout_constraintStart_toStartOf="@+id/cb4312_4"
+                app:layout_constraintTop_toBottomOf="@+id/cb4312_4"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/m4312_1"
+                style="@style/playerbtn"
+                android:layout_marginBottom="120dp"
+                app:layout_constraintBottom_toTopOf="@+id/cb4312_1"
+                app:layout_constraintEnd_toStartOf="@+id/cb4312_2"
+                app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/m4312_1t"
+                style="@style/playernum"
+                app:layout_constraintEnd_toEndOf="@+id/m4312_1"
+                app:layout_constraintStart_toStartOf="@+id/m4312_1"
+                app:layout_constraintTop_toBottomOf="@+id/m4312_1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/m4312_2"
+                style="@style/playerbtn"
+                app:layout_constraintEnd_toStartOf="@+id/m4312_3"
+                app:layout_constraintStart_toEndOf="@+id/m4312_1"
+                app:layout_constraintTop_toTopOf="@+id/m4312_1t" />
+            <TextView
+                android:id="@+id/m4312_2t"
+                style="@style/playernum"
+                app:layout_constraintEnd_toEndOf="@+id/m4312_2"
+                app:layout_constraintStart_toStartOf="@+id/m4312_2"
+                app:layout_constraintTop_toBottomOf="@+id/m4312_2">
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/m4312_3"
+                style="@style/playerbtn"
+                app:layout_constraintBottom_toTopOf="@+id/m4312_1t"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cb4312_3" />
+            <TextView
+                android:id="@+id/m4312_3t"
+                style="@style/playernum"
+                app:layout_constraintEnd_toEndOf="@+id/m4312_3"
+                app:layout_constraintStart_toStartOf="@+id/m4312_3"
+                app:layout_constraintTop_toBottomOf="@+id/m4312_3">
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/m4312_4"
+                style="@style/playerbtn"
+                app:layout_constraintBottom_toTopOf="@+id/m4312_1"
+                app:layout_constraintEnd_toStartOf="@+id/m4312_3"
+                app:layout_constraintStart_toEndOf="@+id/m4312_1" />
+            <TextView
+                android:id="@+id/m4312_4t"
+                style="@style/playernum"
+                app:layout_constraintEnd_toEndOf="@+id/m4312_4"
+                app:layout_constraintStart_toStartOf="@+id/m4312_4"
+                app:layout_constraintTop_toBottomOf="@+id/m4312_4">
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/f4312_1"
+                style="@style/playerbtn"
+                app:layout_constraintBottom_toTopOf="@+id/m4312_4"
+                app:layout_constraintEnd_toStartOf="@+id/m4312_4"
+                app:layout_constraintStart_toEndOf="@+id/m4312_1"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/f4312_1t"
+                style="@style/playernum"
+                app:layout_constraintEnd_toEndOf="@+id/f4312_1"
+                app:layout_constraintStart_toStartOf="@+id/f4312_1"
+                app:layout_constraintTop_toBottomOf="@+id/f4312_1">
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/f4312_2"
+                style="@style/playerbtn"
+                app:layout_constraintBottom_toTopOf="@+id/m4312_4"
+                app:layout_constraintEnd_toStartOf="@+id/m4312_3"
+                app:layout_constraintStart_toEndOf="@+id/m4312_4"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/f4312_2t"
+                style="@style/playernum"
+                app:layout_constraintEnd_toEndOf="@+id/f4312_2"
+                app:layout_constraintStart_toStartOf="@+id/f4312_2"
+                app:layout_constraintTop_toBottomOf="@+id/f4312_2">
+            </TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
