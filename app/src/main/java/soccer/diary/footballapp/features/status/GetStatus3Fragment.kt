@@ -22,8 +22,7 @@ class GetStatus3Fragment : Fragment() {
     private lateinit var binding: FragmentGetStatus3Binding
     private lateinit var adapter: LineupAdapter
     private lateinit var recyclerView: RecyclerView
-    private lateinit var subadapter: SublineupAdapter
-    private lateinit var subrecyclerView: RecyclerView
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

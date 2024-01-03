@@ -1,6 +1,7 @@
 package soccer.diary.footballapp.features.status
 
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -29,6 +30,10 @@ class LineupAdapter(private val context: Context) : RecyclerView.Adapter<LineupA
             val sub = item.sub
             if (sub == true) {
                 binding.sub.text = "sub"
+                binding.sub.setTextColor(Color.GRAY)
+                binding.playerNum.setTextColor(Color.GRAY)
+                binding.playerName.setTextColor(Color.GRAY)
+                binding.playerPosition.setTextColor(Color.GRAY)
             } else binding.sub.text = " "
             binding.playerNum.text = num.toString()
             binding.playerName.text = name

@@ -86,7 +86,7 @@ class LeagueFragment : Fragment(), onBackPressedListener {
             }
             140 -> {
                 background.setImageResource(R.drawable.lalgue_background)
-                logo.setImageResource(R.drawable.la_2)
+                logo.setImageResource(R.drawable.laligalogoblack)
             }
             292 -> {
                 background.setImageResource(R.drawable.kbackground)
