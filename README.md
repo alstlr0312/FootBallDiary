@@ -33,7 +33,6 @@ OpenApi를 이용하여 만든 축구 일정 어플리케이션
 개발 환경 : Window, Android   
 개발 도구 : Android Studio  
 버전관리 : Notion, GIt  
-## 구조
-<p align="center"><img src="https://user-images.githubusercontent.com/57493546/237001396-3e01c550-f99d-4b7d-86ac-e00a587139a8.png" alt="구조도"></p>
+
 
 
