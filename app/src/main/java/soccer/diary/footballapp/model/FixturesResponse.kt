@@ -6,87 +6,6 @@ import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
-data class gameItem(
-    @SerializedName("homeimg")
-    val homeimg: String,
-    @SerializedName("homescore")
-    val homescore: Int,
-    @SerializedName("hometeam")
-    val hometeam: String,
-    @SerializedName("awayimg")
-    val awayimg: String,
-    @SerializedName("awayscore")
-    val awayscore: Int,
-    @SerializedName("awayteam")
-    val awayteam: String,
-    @SerializedName("startime")
-    val startime: String,
-    @SerializedName("id")
-    val id: Int,
-): Serializable
-
-data class StatusResponse(
-    @SerializedName("errors")
-    val errors: List<Any>,
-    @SerializedName("get")
-    val `get`: String,
-    @SerializedName("paging")
-    val paging: Paging,
-    @SerializedName("parameters")
-    val parameters: Parameters,
-    @SerializedName("response")
-    val response: List<lineResponse>,
-    @SerializedName("results")
-    val results: Int
-) : Serializable
-
-data class RankingResponse(
-    @SerializedName("errors")
-    val errors: List<Any>,
-    @SerializedName("get")
-    val `get`: String,
-    @SerializedName("paging")
-    val paging: Paging,
-    @SerializedName("parameters")
-    val parameters: Parameters,
-    @SerializedName("response")
-    val response: List<Response>,
-    @SerializedName("results")
-    val results: Int
-) : Serializable
-
-data class lineResponse(
-    @SerializedName("events")
-    val events: List<Event>,
-    @SerializedName("fixture")
-    val fixture: Fixture,
-    @SerializedName("goals")
-    val goals: Goals,
-    @SerializedName("league")
-    val league: League,
-    @SerializedName("lineups")
-    val lineups: List<Lineup>,
-    @SerializedName("players")
-    val players: List<PlayerXXXX>,
-    @SerializedName("score")
-    val score: Score,
-    @SerializedName("statistics")
-    val statistics: List<StatisticX>,
-    @SerializedName("teams")
-    val teams: Teams
-): Serializable
-data class All(
-    @SerializedName("draw")
-    val draw: Int,
-    @SerializedName("goals")
-    val goals: Goals,
-    @SerializedName("lose")
-    val lose: Int,
-    @SerializedName("played")
-    val played: Int,
-    @SerializedName("win")
-    val win: Int
-): Serializable
 data class FixturesResponse(
     @SerializedName("errors")
     val errors: List<Any>,
@@ -100,6 +19,18 @@ data class FixturesResponse(
     val response: List<Response>,
     @SerializedName("results")
     val results: Int
+): Serializable
+data class All(
+    @SerializedName("draw")
+    val draw: Int,
+    @SerializedName("goals")
+    val goals: Goals,
+    @SerializedName("lose")
+    val lose: Int,
+    @SerializedName("played")
+    val played: Int,
+    @SerializedName("win")
+    val win: Int
 ): Serializable
 
 data class Standing(
